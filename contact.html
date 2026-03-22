@@ -217,21 +217,33 @@
 </footer>
 
 <script>
-  function submitForm(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
+  async function submitForm(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
 
-    // Replace this with your actual form handler (Formspree, EmailJS, etc.)
-    // Example Formspree: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(e.target) })
-    setTimeout(() => {
+  try {
+    const res = await fetch('https://formspree.io/f/mkoqlowk', {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
       document.getElementById('replyEmail').textContent = email;
       document.getElementById('formSuccess').style.display = 'block';
       document.getElementById('contactForm').style.display = 'none';
-    }, 1000);
+    } else {
+      throw new Error('Failed');
+    }
+  } catch {
+    alert('Something went wrong. Please email support@notetomail.com directly.');
+    btn.textContent = 'Send message →';
+    btn.disabled = false;
   }
+}
 </script>
 </body>
 </html>
