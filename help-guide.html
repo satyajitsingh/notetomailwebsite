@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoteToMail — Help Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #0a2e22;
+    --green-mid: #0f6e56;
+    --green-accent: #1db87a;
+    --green-light: #e1f5ee;
+    --green-pale: #f0faf5;
+    --text-dark: #0d1f18;
+    --text-mid: #3a5a4a;
+    --text-muted: #7a9e8e;
+    --white: #ffffff;
+    --border: #d0e8dc;
+    --warn-bg: #fff8e6;
+    --warn-border: #f0c040;
+    --warn-text: #7a5a00;
+    --tip-bg: #e8f4ff;
+    --tip-border: #6aabdf;
+    --tip-text: #1a4a7a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--green-pale);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--green-dark);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+
+  .logo span { color: var(--green-accent); }
+
+  .header-badge {
+    background: rgba(29,184,122,0.15);
+    border: 1px solid rgba(29,184,122,0.3);
+    color: var(--green-accent);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--green-dark) 0%, #0d3d2a 60%, #0f5a3e 100%);
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(29,184,122,0.12) 0%, transparent 70%);
+    top: -200px; right: -100px;
+    pointer-events: none;
+  }
+
+  .hero-label {
+    display: inline-block;
+    background: rgba(29,184,122,0.15);
+    border: 1px solid rgba(29,184,122,0.4);
+    color: var(--green-accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--green-accent); }
+
+  .hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  .hero-cards {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero-card .icon { font-size: 20px; }
+
+  /* LAYOUT */
+  .layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* SIDEBAR NAV */
+  .sidebar {
+    position: sticky;
+    top: 80px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 0;
+    overflow: hidden;
+  }
+
+  .sidebar-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 20px 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 20px;
+    font-size: 13.5px;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+
+  .nav-item:hover {
+    background: var(--green-pale);
+    color: var(--green-mid);
+  }
+
+  .nav-item .nav-icon { font-size: 15px; width: 20px; text-align: center; }
+
+  /* MAIN CONTENT */
+  .content { display: flex; flex-direction: column; gap: 40px; }
+
+  /* SECTION */
+  .section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    scroll-margin-top: 100px;
+  }
+
+  .section-header {
+    background: linear-gradient(135deg, var(--green-dark), #0d3d2a);
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-icon {
+    width: 48px; height: 48px;
+    background: rgba(29,184,122,0.2);
+    border: 1px solid rgba(29,184,122,0.3);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  .section-header p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 2px;
+  }
+
+  .section-body { padding: 36px; }
+
+  /* STEP */
+  .step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .step:last-child { margin-bottom: 0; }
+
+  .step-num {
+    width: 36px; height: 36px;
+    background: var(--green-light);
+    border: 2px solid var(--green-accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green-mid);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .step-content p {
+    font-size: 15px;
+    color: var(--text-mid);
+    margin-bottom: 10px;
+  }
+
+  /* OPTIONS */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--green-pale);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--text-mid);
+  }
+
+  .option .opt-icon { font-size: 18px; flex-shrink: 0; }
+  .option strong { color: var(--text-dark); display: block; font-size: 14px; margin-bottom: 2px; }
+
+  /* MODE CARDS */
+  .mode-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .mode-card {
+    border-radius: 12px;
+    padding: 18px;
+    border: 2px solid transparent;
+  }
+
+  .mode-card.manual {
+    background: #f8f8f8;
+    border-color: #ddd;
+  }
+
+  .mode-card.ai {
+    background: var(--green-light);
+    border-color: var(--green-accent);
+  }
+
+  .mode-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mode-card.manual h4 { color: #555; }
+  .mode-card.ai h4 { color: var(--green-mid); }
+
+  .mode-card ul {
+    list-style: none;
+    font-size: 13px;
+    color: var(--text-mid);
+  }
+
+  .mode-card ul li { padding: 3px 0; }
+  .mode-card ul li::before { content: '→ '; color: var(--green-accent); font-weight: 600; }
+
+  /* TIP BOX */
+  .tip {
+    background: var(--tip-bg);
+    border-left: 4px solid var(--tip-border);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--tip-text);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .tip .tip-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+  /* WARNING BOX */
+  .warn {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--warn-text);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* FILE TYPES */
+  .file-types {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .file-tag {
+    background: var(--green-dark);
+    color: var(--green-accent);
+    font-family: monospace;
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  /* AI ANALYSIS GRID */
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .analysis-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .analysis-card-header {
+    background: var(--green-light);
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-mid);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .analysis-card-body {
+    padding: 14px 18px;
+  }
+
+  .analysis-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--text-mid);
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .analysis-item:last-child { border-bottom: none; }
+  .analysis-dot { width: 8px; height: 8px; background: var(--green-accent); border-radius: 50%; flex-shrink: 0; }
+
+  /* ISSUE LIST */
+  .issue {
+    background: #fff5f5;
+    border: 1px solid #fcc;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+
+  .issue h4 {
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .issue p { font-size: 13.5px; color: #7a3a3a; }
+
+  /* BEST PRACTICES */
+  .practices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .practice {
+    background: var(--green-pale);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .practice .p-icon { font-size: 20px; flex-shrink: 0; }
+  .practice p { font-size: 13.5px; color: var(--text-mid); }
+  .practice strong { color: var(--text-dark); display: block; margin-bottom: 2px; }
+
+  /* PLANS */
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+  }
+
+  .plan {
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+  .plan.pro { border-color: var(--green-accent); background: var(--green-light); }
+
+  .plan h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .plan.free h4 { color: var(--text-dark); }
+  .plan.pro h4 { color: var(--green-mid); }
+
+  .plan ul { list-style: none; font-size: 14px; color: var(--text-mid); }
+  .plan ul li { padding: 4px 0; }
+  .plan ul li::before { content: '✓ '; color: var(--green-accent); font-weight: 700; }
+
+  /* SUPPORT */
+  .support-box {
+    background: var(--green-dark);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .support-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .support-box p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 24px; }
+
+  .support-btn {
+    display: inline-block;
+    background: var(--green-accent);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .support-btn:hover { opacity: 0.85; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+  }
+
+  /* SCORE BOX */
+  .score-box {
+    background: var(--green-pale);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-top: 12px;
+  }
+
+  .score-box h4 { font-size: 15px; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
+
+  .score-items { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .score-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: var(--text-mid);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .score-dot { width: 8px; height: 8px; background: var(--green-accent); border-radius: 50%; }
+
+  /* TONE/FORMAT GRID */
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 12px;
+  }
+
+  .opt-group h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .opt-tag {
+    display: inline-block;
+    background: var(--green-light);
+    border: 1px solid var(--border);
+    color: var(--green-mid);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin: 4px 4px 4px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--green-dark);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    margin-top: 40px;
+  }
+
+  footer a { color: var(--green-accent); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .mode-cards, .analysis-grid, .practices, .plans, .options-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">Note<span>To</span>Mail</div>
+    <div class="header-badge">Help Guide</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">📖 Documentation</div>
+  <h1>Everything you need<br>to get <span>started</span></h1>
+  <p>Turn any notes, recordings or files into structured insights and professional emails — in seconds.</p>
+  <div class="hero-cards">
+    <div class="hero-card"><span class="icon">🎙️</span> Voice Recording</div>
+    <div class="hero-card"><span class="icon">📝</span> Paste Notes</div>
+    <div class="hero-card"><span class="icon">📄</span> Upload Files</div>
+    <div class="hero-card"><span class="icon">✉️</span> Generate Emails</div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-title">Contents</div>
+    <a class="nav-item" href="#getting-started"><span class="nav-icon">✨</span> Getting Started</a>
+    <a class="nav-item" href="#recording"><span class="nav-icon">🎙️</span> Recording a Meeting</a>
+    <a class="nav-item" href="#uploading"><span class="nav-icon">📂</span> Uploading Files</a>
+    <a class="nav-item" href="#ai-analysis"><span class="nav-icon">🧠</span> AI Analysis</a>
+    <a class="nav-item" href="#ask-notes"><span class="nav-icon">🔍</span> Ask My Notes</a>
+    <a class="nav-item" href="#translate"><span class="nav-icon">🌍</span> Translate Notes</a>
+    <a class="nav-item" href="#generate"><span class="nav-icon">✉️</span> Generate Emails</a>
+    <a class="nav-item" href="#output"><span class="nav-icon">📊</span> Understanding Output</a>
+    <a class="nav-item" href="#issues"><span class="nav-icon">⚠️</span> Common Issues</a>
+    <a class="nav-item" href="#best-practices"><span class="nav-icon">💡</span> Best Practices</a>
+    <a class="nav-item" href="#limits"><span class="nav-icon">🔒</span> Usage Limits</a>
+    <a class="nav-item" href="#support"><span class="nav-icon">🆘</span> Support</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- GETTING STARTED -->
+    <section class="section" id="getting-started">
+      <div class="section-header">
+        <div class="section-icon">✨</div>
+        <div>
+          <h2>Getting Started</h2>
+          <p>Three simple steps to your first email</p>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Add your notes</h3>
+            <p>Choose how you want to get your content into NoteToMail:</p>
+            <div class="options">
+              <div class="option"><span class="opt-icon">📝</span><div><strong>Paste notes</strong>Type or paste any notes directly into the text box</div></div>
+              <div class="option"><span class="opt-icon">🎙️</span><div><strong>Record a meeting</strong>Use the built-in voice recorder — no extra software needed</div></div>
+              <div class="option"><span class="opt-icon">📄</span><div><strong>Upload a file</strong>Upload an audio, video or text file for automatic transcription</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Choose your mode</h3>
+            <div class="mode-cards">
+              <div class="mode-card manual">
+                <h4>📝 Manual Mode</h4>
+                <ul>
+                  <li>Uses your notes exactly as written</li>
+                  <li>No AI analysis applied</li>
+                  <li>Best for short, structured notes</li>
+                </ul>
+              </div>
+              <div class="mode-card ai">
+                <h4>🤖 AI Mode</h4>
+                <ul>
+                  <li>Automatically analyses your notes</li>
+                  <li>Extracts key points & actions</li>
+                  <li>Identifies decisions & risks</li>
+                  <li>Best for longer or messy notes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Click Generate Email</h3>
+            <p>Your ready-to-send email will appear. You can then:</p>
+            <div class="options">
+              <div class="option"><span class="opt-icon">📋</span><div>Copy to clipboard</div></div>
+              <div class="option"><span class="opt-icon">⬇️</span><div>Download as a file</div></div>
+              <div class="option"><span class="opt-icon">📧</span><div>Open directly in Gmail, Outlook or Yahoo</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RECORDING -->
+    <section class="section" id="recording">
+      <div class="section-header">
+        <div class="section-icon">🎙️</div>
+        <div>
+          <h2>Recording a Meeting</h2>
+          <p>Record directly in the app — no extra software needed</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Click Start Recording</h3><p>Grant microphone permission when prompted by your browser.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Speak clearly</h3><p>Talk naturally. NoteToMail will capture everything said during the meeting.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Click Stop</h3><p>When your meeting ends, stop the recording.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Wait for transcription</h3><p>Your audio is automatically converted to text — usually within 10–60 seconds.</p></div></div>
+        <div class="tip"><span class="tip-icon">💡</span><span>Long recordings take longer to process. A 1-hour meeting may take up to 2 minutes to transcribe.</span></div>
+      </div>
+    </section>
+
+    <!-- UPLOADING -->
+    <section class="section" id="uploading">
+      <div class="section-header">
+        <div class="section-icon">📂</div>
+        <div>
+          <h2>Uploading Files</h2>
+          <p>Support for audio, video and text files</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:16px;">You can upload existing recordings or documents directly into NoteToMail.</p>
+        <h3 style="font-size:15px; margin-bottom:10px; color:var(--text-dark);">Supported file types</h3>
+        <div class="file-types">
+          <span class="file-tag">.txt</span>
+          <span class="file-tag">.mp3</span>
+          <span class="file-tag">.wav</span>
+          <span class="file-tag">.mp4</span>
+        </div>
+        <div class="divider"></div>
+        <h3 style="font-size:15px; margin-bottom:12px; color:var(--text-dark);">What happens after upload</h3>
+        <div class="step"><div class="step-num">1</div><div class="step-content"><h3>File is transcribed</h3><p>Audio and video files are automatically converted to text.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Notes appear automatically</h3><p>The transcribed text fills the notes area for you.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><h3>AI analysis runs</h3><p>If AI Mode is enabled, analysis begins immediately after transcription.</p></div></div>
+        <div class="warn"><span>⚠️</span><span><strong>Maximum file size: 100MB.</strong> Files larger than this will not upload. Split long recordings if needed.</span></div>
+      </div>
+    </section>
+
+    <!-- AI ANALYSIS -->
+    <section class="section" id="ai-analysis">
+      <div class="section-header">
+        <div class="section-icon">🧠</div>
+        <div>
+          <h2>AI Analysis</h2>
+          <p>Deep understanding of your content — not just a rewrite</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:20px;">When AI Mode is ON, NoteToMail analyses your content and extracts structured insights — automatically. The output depends on the type of content you provide.</p>
+        <div class="analysis-grid">
+          <div class="analysis-card">
+            <div class="analysis-card-header">🗣️ For meetings & business notes</div>
+            <div class="analysis-card-body">
+              <div class="analysis-item"><div class="analysis-dot"></div>Summary</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Key takeaways</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Decisions made</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Action items</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Risks identified</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Suggestions</div>
+            </div>
+          </div>
+          <div class="analysis-card">
+            <div class="analysis-card-header">📚 For lectures, training & research</div>
+            <div class="analysis-card-body">
+              <div class="analysis-item"><div class="analysis-dot"></div>Topic identified</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Summary</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Key points</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Suggestions</div>
+            </div>
+          </div>
+        </div>
+        <div class="tip"><span class="tip-icon">💡</span><span>AI analysis works best when your notes include clear decisions, named people, and specific actions. The more structured your input, the richer the output.</span></div>
+      </div>
+    </section>
+
+    <!-- ASK MY NOTES -->
+    <section class="section" id="ask-notes">
+      <div class="section-header">
+        <div class="section-icon">🔍</div>
+        <div>
+          <h2>Ask My Notes</h2>
+          <p>Have a conversation with your own content</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:20px;">Ask My Notes lets you ask questions about your notes before generating an email. The AI answers using only the content you've provided.</p>
+        <h3 style="font-size:15px; margin-bottom:12px;">Example questions you can ask:</h3>
+        <div class="options">
+          <div class="option"><span class="opt-icon">💬</span><div>"What are the risks mentioned?"</div></div>
+          <div class="option"><span class="opt-icon">💬</span><div>"What actions were assigned and to whom?"</div></div>
+          <div class="option"><span class="opt-icon">💬</span><div>"Was this a productive meeting?"</div></div>
+          <div class="option"><span class="opt-icon">💬</span><div>"What decisions were made?"</div></div>
+          <div class="option"><span class="opt-icon">💬</span><div>"Summarise the key points in 3 sentences."</div></div>
+        </div>
+        <div class="tip"><span class="tip-icon">💡</span><span>Use Ask My Notes to check the AI understood your content correctly before generating the final email.</span></div>
+      </div>
+    </section>
+
+    <!-- TRANSLATE -->
+    <section class="section" id="translate">
+      <div class="section-header">
+        <div class="section-icon">🌍</div>
+        <div>
+          <h2>Translate Notes</h2>
+          <p>Record in any language, email in professional English</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Select a target language</h3><p>Choose from 40+ supported languages in the language dropdown.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Click Translate Notes</h3><p>Your notes will be translated and the email will be generated in your chosen language.</p></div></div>
+        <div class="tip"><span class="tip-icon">💡</span><span>Particularly useful for international teams, multilingual meetings, or non-native English speakers who want to communicate professionally in English.</span></div>
+      </div>
+    </section>
+
+    <!-- GENERATE EMAIL -->
+    <section class="section" id="generate">
+      <div class="section-header">
+        <div class="section-icon">✉️</div>
+        <div>
+          <h2>Generate Emails</h2>
+          <p>Choose your tone and format before generating</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:16px;">Before clicking Generate Email, customise how your email should be written:</p>
+        <div class="options-grid">
+          <div class="opt-group">
+            <h4>Tone</h4>
+            <span class="opt-tag">Formal</span>
+            <span class="opt-tag">Friendly</span>
+            <span class="opt-tag">Executive</span>
+          </div>
+          <div class="opt-group">
+            <h4>Format</h4>
+            <span class="opt-tag">Summary</span>
+            <span class="opt-tag">Follow-up</span>
+            <span class="opt-tag">Action-focused</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p style="color:var(--text-mid);">Then click <strong style="color:var(--green-mid);">Generate Email</strong> — your email will appear ready to send, copy or download.</p>
+      </div>
+    </section>
+
+    <!-- OUTPUT -->
+    <section class="section" id="output">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <div>
+          <h2>Understanding the Output</h2>
+          <p>What the Meeting Quality Score means</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:16px;">After AI analysis, you'll see a <strong>Meeting Quality Score</strong> out of 100. This gives you a quick sense of how much useful content was in your notes.</p>
+        <div class="score-box">
+          <h4>Score is calculated based on:</h4>
+          <div class="score-items">
+            <div class="score-item"><div class="score-dot"></div>Number of action items</div>
+            <div class="score-item"><div class="score-dot"></div>Decisions captured</div>
+            <div class="score-item"><div class="score-dot"></div>Clarity of notes</div>
+            <div class="score-item"><div class="score-dot"></div>Risks identified</div>
+          </div>
+        </div>
+        <div class="tip" style="margin-top:20px;"><span class="tip-icon">💡</span><span>A low score usually means your notes were short or lacked clear decisions and actions — not that the meeting was bad!</span></div>
+      </div>
+    </section>
+
+    <!-- COMMON ISSUES -->
+    <section class="section" id="issues">
+      <div class="section-header">
+        <div class="section-icon">⚠️</div>
+        <div>
+          <h2>Common Issues</h2>
+          <p>Quick fixes for the most frequent problems</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="issue">
+          <h4>❌ "No speech detected"</h4>
+          <p>The recording may have been silent, or your microphone was muted. Check your microphone permissions in your browser settings and try again.</p>
+        </div>
+        <div class="issue">
+          <h4>❌ Partial or incomplete transcript</h4>
+          <p>This usually happens with very large files or poor audio quality. Try splitting long recordings into smaller parts, or re-record in a quieter environment.</p>
+        </div>
+        <div class="issue">
+          <h4>❌ No insights generated</h4>
+          <p>Your notes may be too short or lack clear actions and decisions. Try adding more detail — bullet points with named people, specific decisions and actions work best.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEST PRACTICES -->
+    <section class="section" id="best-practices">
+      <div class="section-header">
+        <div class="section-icon">💡</div>
+        <div>
+          <h2>Best Practices</h2>
+          <p>Get the most out of NoteToMail</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="practices">
+          <div class="practice"><span class="p-icon">🗣️</span><div><strong>Speak clearly</strong><p>When recording, speak at a normal pace and avoid talking over others.</p></div></div>
+          <div class="practice"><span class="p-icon">🔇</span><div><strong>Reduce background noise</strong><p>Record in a quiet space for the most accurate transcription.</p></div></div>
+          <div class="practice"><span class="p-icon">📋</span><div><strong>Use bullet points</strong><p>Structured notes with bullet points produce better AI analysis than long paragraphs.</p></div></div>
+          <div class="practice"><span class="p-icon">✅</span><div><strong>Include decisions & actions</strong><p>Explicitly state who owns each action and what was decided for the best email output.</p></div></div>
+          <div class="practice"><span class="p-icon">🎯</span><div><strong>State key outcomes</strong><p>End your notes with a short summary of what was agreed to help the AI draft a better closing.</p></div></div>
+          <div class="practice"><span class="p-icon">🌍</span><div><strong>Use your native language</strong><p>Don't worry about writing in English — record or write in any language and NoteToMail handles the rest.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USAGE LIMITS -->
+    <section class="section" id="limits">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <div>
+          <h2>Usage Limits</h2>
+          <p>What's included in each plan</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="plans">
+          <div class="plan free">
+            <h4>🆓 Free Plan</h4>
+            <ul>
+              <li>30 transcription minutes / month</li>
+              <li>100 AI emails / month</li>
+              <li>Voice recording</li>
+              <li>AI analysis</li>
+              <li>40+ languages</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <h4>⭐ Pro Plan</h4>
+            <ul>
+              <li>3,000+ transcription minutes / month</li>
+              <li>5,000+ AI emails / month</li>
+              <li>Ask My Notes AI feature</li>
+              <li>Priority processing</li>
+              <li>Cancel anytime</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tip" style="margin-top:20px;"><span class="tip-icon">💡</span><span>Check your remaining quota at any time in your <strong>Dashboard</strong>. You'll be notified when you're close to your limit.</span></div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="section" id="support">
+      <div class="section-header">
+        <div class="section-icon">🆘</div>
+        <div>
+          <h2>Support</h2>
+          <p>We're here to help</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="support-box">
+          <h3>Still need help?</h3>
+          <p>If something isn't working or you have a question not covered in this guide, our support team is ready to help.</p>
+          <a href="mailto:support@notetomail.com" class="support-btn">✉️ Contact Support</a>
+          <p style="margin-top:16px; font-size:13px;">support@notetomail.com</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 NoteToMail · Built by <a href="https://safalsolutions.co.uk">SafalSolutions Ltd</a> · <a href="mailto:support@notetomail.com">support@notetomail.com</a></p>
+</footer>
+
+</body>
+</html>

@@ -123,12 +123,12 @@
 
   <!-- Support cards -->
   <div class="support-grid">
-    <div class="support-card">
-      <span class="support-card-icon">📚</span>
-      <h3>Getting Started</h3>
-      <p>New to NoteToMail? Learn how to record notes, generate emails and get the most from AI analysis.</p>
-      <span class="card-link">Read guides ↓</span>
-    </div>
+    <a href="help-guide.html" class="support-card">
+      <span class="support-card-icon">📖</span>
+      <h3>Full Help Guide</h3>
+      <p>Step-by-step walkthroughs for every feature — recording, AI analysis, Ask My Notes, translations and more.</p>
+      <span class="card-link">Open guide →</span>
+    </a>
     <a href="contact.html" class="support-card">
       <span class="support-card-icon">💬</span>
       <h3>Contact Support</h3>
@@ -145,7 +145,7 @@
 
   <!-- Guides -->
   <div class="guides-section">
-    <h2>Guides & how-to</h2>
+    <h2 style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">Guides & how-to <a href="help-guide.html" style="font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;background:var(--accent-lt);padding:6px 16px;border-radius:20px;">📖 Full help guide →</a></h2>
     <div class="guide-list">
       <div class="guide-item">
         <span class="guide-icon">🎙</span>
@@ -213,7 +213,7 @@
       <p>Our support team is here to help. We respond to all enquiries within 24 hours on business days (Monday–Friday, UK time).</p>
       <div class="contact-detail">
         <span>📧</span>
-        <a href="mailto:support@notetomail.com">support@notetomail.com</a>
+        <a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecae4e5feeffee5e7ebe3e6a4e9e5e7"><span class="__cf_email__" data-cfemail="11626461617e6365517f7e6574657e7c70787d3f727e7c">[email&#160;protected]</span></a>
       </div>
       <div class="contact-detail">
         <span>⏰</span>
@@ -273,20 +273,10 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function submitForm(e) {
     e.preventDefault();
     // In production, replace with your form submission endpoint or Formspree/EmailJS
     const btn = e.target.querySelector('.form-submit');
     btn.textContent = 'Sending…';
-    btn.disabled = true;
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'block';
-      e.target.reset();
-      btn.textContent = 'Send message →';
-      btn.disabled = false;
-    }, 1000);
-  }
-</script>
-</body>
-</html>
+    btn.d
