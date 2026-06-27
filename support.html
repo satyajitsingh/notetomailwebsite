@@ -103,6 +103,19 @@
     .guide-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
     .guide-item h4 { font-size: 15px; margin-bottom: 6px; }
     .guide-item p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+    .pro-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      background: var(--accent);
+      color: white;
+      padding: 2px 7px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
 
     @media (max-width: 768px) { .guide-list { grid-template-columns: 1fr; } .nav-links, .nav-cta { display: none; } }
 
@@ -246,14 +259,14 @@
         <span class="guide-icon">🌍</span>
         <div>
           <h4>Using other languages</h4>
-          <p>Set the Spoken Language to your language before recording. You can also translate notes to another language using the Translate Notes button. Email output is currently generated in English.</p>
+          <p>Set the Spoken Language before recording. Choose your Analysis Output Language and Email Output Language independently — so your analysis and email can each be in a different language.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">📊</span>
         <div>
           <h4>Checking your usage</h4>
-          <p>Go to Dashboard → View detailed usage to see your transcription minutes and AI calls used this period. You'll receive a warning when you reach 80% of your allowance.</p>
+          <p>Go to Dashboard → View detailed usage to see your AI minutes and AI calls used this period. You'll receive a warning when you reach 80% of your allowance.</p>
         </div>
       </div>
       <div class="guide-item">
@@ -261,6 +274,34 @@
         <div>
           <h4>Managing your subscription</h4>
           <p>Upgrade, cancel or change your plan from the Dashboard. Cancellations take effect at the end of your billing period and your account moves to the Free plan automatically.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">💾</span>
+        <div>
+          <h4>Saving a meeting <span class="pro-badge">Pro</span></h4>
+          <p>Available on Pro plans. After processing your notes or recording, your meeting is automatically saved to your account. Go to Meetings in the app to view all saved sessions — including transcript, AI analysis and generated email.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">⚖️</span>
+        <div>
+          <h4>Comparing meetings <span class="pro-badge">Pro</span></h4>
+          <p>Available on Pro plans. Go to Meetings and select two or more saved sessions. Click Compare to view them side by side. NoteToMail highlights common themes, decisions and action items across the selected meetings.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">🔎</span>
+        <div>
+          <h4>Searching your meetings <span class="pro-badge">Pro</span></h4>
+          <p>Available on Pro plans. Use the search bar in the Meetings section to find any past meeting. Semantic search understands meaning — searching "budget discussion" will find meetings where finances were discussed even if those exact words weren't used.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">🔒</span>
+        <div>
+          <h4>How your data is stored</h4>
+          <p>Your meetings, notes and recordings are encrypted and stored securely in compliance with UK GDPR regulations. Data is automatically archived and deleted after 12 months. We never use your content to train AI models. Coming soon: store your meetings in your own shared storage area.</p>
         </div>
       </div>
     </div>
