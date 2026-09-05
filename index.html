@@ -3,172 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NoteToMail — Turn Meeting Notes into Professional Emails</title>
-  <meta name="description" content="Record or paste your meeting notes. AI extracts decisions, actions and generates a ready-to-send professional email in seconds." />
+  <meta name="google-site-verification" content="jN5_sM2YT8TlNI9cLQJbFQOp0LBzG-FJ69l03ibrVQM">
+  <title>NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence</title>
+  <meta name="description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta name="keywords" content="AI meeting intelligence, meeting intelligence platform, AI meeting analysis, meeting journey, journey intelligence, meeting comparison, semantic meeting search, ask questions about meetings, conversation intelligence, AI meeting notes, follow-up email generator">
+  <link rel="canonical" href="https://notetomail.com/">
+
+  <!---linkedln-->
+  <script type="text/javascript">
+  _linkedin_partner_id = "8895330";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script><script type="text/javascript">
+  (function(l) {
+  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+  window.lintrk.q=[]}
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8895330&fmt=gif" />
+  </noscript>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence">
+  <meta property="og:description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta property="og:url" content="https://notetomail.com/">
+  <meta property="og:site_name" content="NoteToMail">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://notetomail.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence">
+  <meta name="twitter:description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta name="twitter:image" content="https://notetomail.com/og-image.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://notetomail.com/#organization",
+        "name": "NoteToMail",
+        "url": "https://notetomail.com",
+        "logo": "https://notetomail.com/og-image.png",
+        "email": "support@notetomail.com",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "SafalSolutions Ltd",
+          "url": "https://www.safalsolutions.co.uk"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://notetomail.com/#website",
+        "name": "NoteToMail",
+        "url": "https://notetomail.com",
+        "inLanguage": "en-GB",
+        "description": "AI meeting intelligence for understanding individual meetings and the journey across them.",
+        "publisher": { "@id": "https://notetomail.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://notetomail.com/#app",
+        "name": "NoteToMail",
+        "url": "https://notetomail.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "description": "AI meeting intelligence. Record or upload meetings, get summaries, decisions, action items and risks, search and question your meeting history, compare related meetings and generate professional follow-up emails.",
+        "image": "https://notetomail.com/og-image.png",
+        "publisher": { "@id": "https://notetomail.com/#organization" },
+        "featureList": [
+          "Meeting recording and file upload",
+          "Automatic transcription",
+          "AI meeting analysis with summary, decisions, action items and risks",
+          "Saved meeting history",
+          "Keyword and semantic meeting search",
+          "Ask My Notes natural-language questions",
+          "Meeting comparison across related meetings",
+          "Professional follow-up email generation",
+          "Input in 40+ languages"
+        ],
+        "offers": [
+          { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "GBP", "url": "https://notetomail.com/#pricing" },
+          { "@type": "Offer", "name": "Pro Monthly", "price": "13.99", "priceCurrency": "GBP", "url": "https://notetomail.com/#pricing" },
+          { "@type": "Offer", "name": "Pro Annual", "price": "139", "priceCurrency": "GBP", "url": "https://notetomail.com/#pricing" }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
-    :root {
-      --ink:        #0f1923;
-      --ink-soft:   #3d4f5e;
-      --ink-muted:  #7a8e9c;
-      --paper:      #f7f5f0;
-      --paper-warm: #edeae3;
-      --accent:     #1a6b4a;
-      --accent-lt:  #e8f5ee;
-      --accent-mid: #2d9966;
-      --gold:       #c8902a;
-      --gold-lt:    #fdf3e3;
-      --white:      #ffffff;
-      --shadow-sm:  0 1px 3px rgba(15,25,35,0.08);
-      --shadow-md:  0 4px 16px rgba(15,25,35,0.10);
-      --shadow-lg:  0 12px 40px rgba(15,25,35,0.14);
-      --r:          10px;
-    }
+    /* ── Homepage-only styles (shared system lives in /assets/site.css) ── */
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    /* ── Typography ── */
-    .serif { font-family: 'Instrument Serif', serif; }
-
-    h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
-
-    /* ── Layout ── */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section    { padding: 96px 0; }
-    .section-sm { padding: 64px 0; }
-
-    /* ── Nav ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(247,245,240,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--paper-warm);
-      padding: 0 24px;
-    }
-    .nav-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
-    .nav-logo {
-      font-family: 'Instrument Serif', serif;
-      font-size: 22px; color: var(--ink);
-      text-decoration: none; letter-spacing: -0.01em;
-    }
-    .nav-logo span { color: var(--accent); }
-    .nav-links {
-      display: flex; gap: 32px; list-style: none;
-    }
-    .nav-links a {
-      text-decoration: none; color: var(--ink-soft);
-      font-size: 14px; font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta { display: flex; gap: 12px; align-items: center; }
-    .btn-ghost {
-      font-size: 14px; font-weight: 500;
-      color: var(--ink-soft); text-decoration: none;
-      padding: 8px 16px; border-radius: 8px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { background: var(--paper-warm); color: var(--ink); }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-      font-size: 14px; font-weight: 600;
-      text-decoration: none;
-      padding: 10px 22px; border-radius: 8px;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(26,107,74,0.25);
-    }
-    .btn-primary:hover {
-      background: var(--accent-mid);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(26,107,74,0.3);
-    }
-    .btn-primary-lg {
-      font-size: 16px; padding: 14px 32px; border-radius: 10px;
-    }
-    .btn-outline {
-      border: 1.5px solid var(--accent);
-      color: var(--accent);
-      font-size: 14px; font-weight: 600;
-      text-decoration: none;
-      padding: 10px 22px; border-radius: 8px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-outline:hover { background: var(--accent-lt); }
-
-    /* Hamburger */
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; padding: 4px; background: none; border: none;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--ink); border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    .mobile-menu {
-      display: none;
-      position: fixed; inset: 0; top: 64px;
-      background: var(--paper);
-      padding: 24px; z-index: 99;
-      flex-direction: column; gap: 16px;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      text-decoration: none; color: var(--ink);
-      font-size: 18px; font-weight: 500;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--paper-warm);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-    }
-
-    /* ── Hero ── */
-    .hero {
-      padding: 80px 0 72px;
-      position: relative; overflow: hidden;
-    }
+    /* Hero */
+    .hero { padding: 76px 0 68px; position: relative; overflow: hidden; }
     .hero::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background:
         radial-gradient(ellipse 60% 50% at 70% 50%, rgba(26,107,74,0.06) 0%, transparent 70%),
         radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,144,42,0.05) 0%, transparent 60%);
       pointer-events: none;
     }
-    .hero-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--accent-lt); color: var(--accent);
-      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 6px 14px; border-radius: 100px;
-      margin-bottom: 24px;
-      border: 1px solid rgba(26,107,74,0.15);
-    }
+    .hero .container { position: relative; }
+    .hero-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
     .hero-badge::before {
       content: ''; width: 7px; height: 7px;
       background: var(--accent); border-radius: 50%;
@@ -183,79 +134,61 @@
       font-size: clamp(38px, 5vw, 58px);
       color: var(--ink); margin-bottom: 20px;
     }
-    .hero h1 em {
-      font-style: italic; color: var(--accent);
-    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
     .hero-sub {
       font-size: 18px; color: var(--ink-soft);
-      line-height: 1.7; margin-bottom: 36px;
-      font-weight: 300;
+      line-height: 1.7; margin-bottom: 14px; font-weight: 300;
     }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-note {
-      margin-top: 16px;
-      font-size: 13px; color: var(--ink-muted);
+    .hero-sub-alt {
+      font-size: 16px; color: var(--ink-muted);
+      line-height: 1.7; margin-bottom: 32px; font-weight: 300;
     }
-    .hero-note strong { color: var(--accent); }
+    .hero-sub-alt strong { color: var(--ink-soft); font-weight: 500; }
 
     /* App preview card */
-    .hero-visual {
-      position: relative;
-    }
+    .hero-visual { position: relative; }
     .app-card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
+      background: var(--white); border-radius: 16px;
+      box-shadow: var(--shadow-lg); overflow: hidden;
       border: 1px solid rgba(15,25,35,0.06);
     }
     .app-card-header {
-      background: var(--ink);
-      padding: 12px 16px;
+      background: var(--ink); padding: 12px 16px;
       display: flex; align-items: center; gap: 8px;
     }
     .dot { width: 10px; height: 10px; border-radius: 50%; }
-    .dot-r { background: #ff5f57; }
-    .dot-y { background: #ffbd2e; }
-    .dot-g { background: #28ca41; }
+    .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28ca41; }
     .app-card-header span {
-      margin-left: auto;
-      font-size: 11px; color: rgba(255,255,255,0.4);
-      font-family: monospace;
+      margin-left: auto; font-size: 11px;
+      color: rgba(255,255,255,0.4); font-family: monospace;
     }
     .app-card-body { padding: 20px; }
     .app-label {
       font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--ink-muted);
-      margin-bottom: 8px;
+      text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px;
     }
     .app-note-box {
-      background: var(--paper);
-      border: 1px solid var(--paper-warm);
-      border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 13px; color: var(--ink-soft);
-      line-height: 1.6; margin-bottom: 12px;
+      background: var(--paper); border: 1px solid var(--paper-warm);
+      border-radius: 8px; padding: 12px 14px;
+      font-size: 13px; color: var(--ink-soft); line-height: 1.6;
     }
-    .app-arrow {
-      text-align: center; font-size: 18px;
-      color: var(--accent); margin: 8px 0;
-    }
-    .app-email-box {
-      background: var(--accent-lt);
+    .app-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .app-chip {
+      font-size: 11px; font-weight: 600;
+      background: var(--accent-lt); color: var(--accent);
       border: 1px solid rgba(26,107,74,0.15);
-      border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 13px; color: var(--ink);
-      line-height: 1.6;
+      border-radius: 100px; padding: 3px 10px;
+    }
+    .app-arrow { text-align: center; font-size: 12px; color: var(--accent); margin: 12px 0 10px; font-weight: 600; letter-spacing: 0.03em; }
+    .app-email-box {
+      background: var(--accent-lt); border: 1px solid rgba(26,107,74,0.15);
+      border-radius: 8px; padding: 12px 14px;
+      font-size: 13px; color: var(--ink); line-height: 1.6;
     }
     .app-email-box strong { color: var(--accent); display: block; margin-bottom: 4px; }
-
     .floating-tag {
-      position: absolute;
-      background: var(--white);
-      border-radius: 10px;
-      padding: 10px 14px;
+      position: absolute; background: var(--white);
+      border-radius: 10px; padding: 10px 14px;
       box-shadow: var(--shadow-md);
       font-size: 12px; font-weight: 600;
       display: flex; align-items: center; gap: 6px;
@@ -267,14 +200,14 @@
       50% { transform: translateY(-6px); }
     }
     .tag-1 { top: -16px; right: -16px; animation-delay: 0s; }
-    .tag-2 { bottom: 24px; left: -20px; animation-delay: 1.5s; }
+    .tag-2 { bottom: -14px; left: -18px; animation-delay: 1.5s; }
 
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
     }
 
-    /* ── Trust bar ── */
+    /* Trust bar */
     .trust-bar {
       background: var(--white);
       border-top: 1px solid var(--paper-warm);
@@ -283,9 +216,8 @@
     }
     .trust-inner {
       max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center;
-      justify-content: center; gap: 40px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
     }
     .trust-item {
       display: flex; align-items: center; gap: 8px;
@@ -293,43 +225,39 @@
     }
     .trust-item span { font-size: 16px; }
 
-    /* ── How it works ── */
-    .steps-grid {
+    /* Product story steps */
+    .story-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 32px; margin-top: 56px;
+      gap: 24px; margin-top: 56px;
     }
-    .step-card {
-      background: var(--white);
-      border-radius: var(--r);
-      padding: 32px;
-      border: 1px solid var(--paper-warm);
-      position: relative;
+    .story-card {
+      background: var(--white); border-radius: var(--r);
+      padding: 30px 28px; border: 1px solid var(--paper-warm);
       transition: box-shadow 0.2s, transform 0.2s;
+      display: flex; flex-direction: column;
     }
-    .step-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
+    .story-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .story-num {
+      font-family: 'Instrument Serif', serif; font-style: italic;
+      font-size: 40px; color: var(--paper-warm); line-height: 1; margin-bottom: 12px;
     }
-    .step-num {
-      font-family: 'Instrument Serif', serif;
-      font-size: 48px; color: var(--paper-warm);
-      line-height: 1; margin-bottom: 16px;
-      font-style: italic;
-    }
-    .step-icon {
+    .story-icon {
       width: 44px; height: 44px; border-radius: 10px;
       background: var(--accent-lt);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px; margin-bottom: 16px;
     }
-    .step-card h3 { font-size: 18px; margin-bottom: 10px; }
-    .step-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
-
-    @media (max-width: 768px) {
-      .steps-grid { grid-template-columns: 1fr; }
+    .story-card h3 { font-size: 18px; margin-bottom: 10px; }
+    .story-card p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.7; }
+    .story-card .card-link {
+      margin-top: auto; padding-top: 14px;
+      font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none;
     }
+    .story-card .card-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .story-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .story-grid { grid-template-columns: 1fr; } }
 
-    /* ── Features ── */
+    /* Features grid (dark) */
     .features-bg { background: var(--ink); }
     .features-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
@@ -338,96 +266,55 @@
       border-radius: 16px; overflow: hidden;
     }
     .feat-card {
-      padding: 36px 32px;
-      background: rgba(255,255,255,0.03);
+      padding: 34px 30px; background: rgba(255,255,255,0.03);
       border-right: 1px solid rgba(255,255,255,0.06);
       border-bottom: 1px solid rgba(255,255,255,0.06);
       transition: background 0.2s;
     }
     .feat-card:hover { background: rgba(255,255,255,0.06); }
-    .feat-icon {
-      font-size: 28px; margin-bottom: 16px; display: block;
-    }
-    .feat-card h3 {
-      font-size: 16px; color: var(--white);
-      margin-bottom: 10px; font-weight: 600;
-    }
+    .feat-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+    .feat-card h3 { font-size: 16px; color: var(--white); margin-bottom: 10px; font-weight: 600; }
     .feat-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; }
-    .features-bg .section-label { color: rgba(255,255,255,0.4); }
-    .features-bg h2 { color: var(--white); }
+    .feat-card a { color: var(--accent-mid); text-decoration: none; }
+    .feat-card a:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
 
-    @media (max-width: 900px) {
-      .features-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .features-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ── Section labels ── */
-    .section-label {
-      display: inline-block;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 14px;
-    }
-    .section-title {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(28px, 4vw, 42px);
-      color: var(--ink); margin-bottom: 16px;
-    }
-    .section-sub {
-      font-size: 17px; color: var(--ink-soft);
-      max-width: 520px; line-height: 1.7;
-      font-weight: 300;
-    }
-    .text-center { text-align: center; }
-    .text-center .section-sub { margin: 0 auto; }
-
-    /* ── Demo ── */
+    /* Demo */
     .demo-grid {
       display: grid; grid-template-columns: 1fr auto 1fr;
       gap: 24px; align-items: center; margin-top: 56px;
     }
     .demo-card {
-      background: var(--white);
-      border-radius: var(--r);
-      padding: 28px;
-      border: 1px solid var(--paper-warm);
+      background: var(--white); border-radius: var(--r);
+      padding: 28px; border: 1px solid var(--paper-warm);
       box-shadow: var(--shadow-sm);
     }
     .demo-card-label {
       font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
       text-transform: uppercase; padding: 4px 10px;
-      border-radius: 6px; display: inline-block;
-      margin-bottom: 16px;
+      border-radius: 6px; display: inline-block; margin-bottom: 16px;
     }
     .label-input { background: var(--paper-warm); color: var(--ink-soft); }
     .label-output { background: var(--accent-lt); color: var(--accent); }
     .demo-text { font-size: 14px; color: var(--ink-soft); line-height: 1.8; }
     .demo-text strong { color: var(--ink); }
-    .demo-arrow {
-      font-size: 28px; color: var(--accent);
-      font-weight: 300;
-    }
-
+    .demo-arrow { font-size: 28px; color: var(--accent); font-weight: 300; }
     @media (max-width: 700px) {
       .demo-grid { grid-template-columns: 1fr; }
       .demo-arrow { text-align: center; }
     }
 
-    /* ── Pricing ── */
+    /* Pricing */
     .pricing-bg { background: var(--paper-warm); }
     .pricing-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 20px; margin-top: 56px; align-items: start;
     }
     .price-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px 32px;
-      border: 1px solid var(--paper-warm);
-      position: relative;
-      transition: box-shadow 0.2s;
+      background: var(--white); border-radius: 16px;
+      padding: 36px 32px; border: 1px solid var(--paper-warm);
+      position: relative; transition: box-shadow 0.2s;
     }
     .price-card:hover { box-shadow: var(--shadow-md); }
     .price-card.featured {
@@ -444,35 +331,28 @@
     .price-name { font-size: 14px; font-weight: 600; color: var(--ink-muted); margin-bottom: 8px; }
     .price-amount {
       font-family: 'Instrument Serif', serif;
-      font-size: 48px; color: var(--ink);
-      line-height: 1; margin-bottom: 4px;
+      font-size: 48px; color: var(--ink); line-height: 1; margin-bottom: 4px;
     }
     .price-amount sup { font-size: 22px; vertical-align: top; margin-top: 8px; }
     .price-period { font-size: 13px; color: var(--ink-muted); margin-bottom: 6px; }
     .price-desc { font-size: 13px; color: var(--ink-soft); margin-bottom: 24px; }
     .price-divider { height: 1px; background: var(--paper-warm); margin: 24px 0; }
-    .price-features { list-style: none; space: 0; }
+    .price-features { list-style: none; }
     .price-features li {
       display: flex; align-items: flex-start; gap: 10px;
-      font-size: 14px; color: var(--ink-soft);
-      padding: 6px 0;
+      font-size: 14px; color: var(--ink-soft); padding: 6px 0;
     }
     .price-features li::before {
-      content: '✓'; color: var(--accent);
+      content: '\2713'; color: var(--accent);
       font-weight: 700; flex-shrink: 0; margin-top: 1px;
     }
     .price-cta {
-      display: block; width: 100%;
-      text-align: center; text-decoration: none;
+      display: block; width: 100%; text-align: center; text-decoration: none;
       padding: 13px; border-radius: 10px;
-      font-weight: 600; font-size: 15px;
-      margin-top: 28px;
+      font-weight: 600; font-size: 15px; margin-top: 28px;
       transition: all 0.2s;
     }
-    .price-cta-outline {
-      border: 1.5px solid var(--paper-warm);
-      color: var(--ink-soft);
-    }
+    .price-cta-outline { border: 1.5px solid var(--paper-warm); color: var(--ink-soft); }
     .price-cta-outline:hover { border-color: var(--accent); color: var(--accent); }
     .price-cta-filled {
       background: var(--accent); color: var(--white);
@@ -482,168 +362,71 @@
       background: var(--accent-mid);
       box-shadow: 0 4px 16px rgba(26,107,74,0.3);
     }
-
     @media (max-width: 900px) {
       .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
     }
-
-    /* ── FAQ ── */
-    .faq-list { max-width: 720px; margin: 56px auto 0; }
-    .faq-item {
-      border-bottom: 1px solid var(--paper-warm);
-    }
-    .faq-q {
-      width: 100%; background: none; border: none;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 0; cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px; font-weight: 500; color: var(--ink);
-      text-align: left; gap: 16px;
-    }
-    .faq-q:hover { color: var(--accent); }
-    .faq-icon {
-      width: 24px; height: 24px; border-radius: 50%;
-      border: 1.5px solid var(--paper-warm);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0; color: var(--ink-muted);
-      transition: transform 0.3s, background 0.2s;
-    }
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
-      background: var(--accent-lt); border-color: var(--accent);
-      color: var(--accent);
-    }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.2s;
-    }
-    .faq-a-inner {
-      padding-bottom: 20px;
-      font-size: 15px; color: var(--ink-soft); line-height: 1.75;
-    }
-    .faq-item.open .faq-a { max-height: 300px; }
-
-    /* ── CTA section ── */
-    .cta-section {
-      background: var(--ink);
-      padding: 96px 0; text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(26,107,74,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-section h2 {
-      font-family: 'Instrument Serif', serif;
-      font-size: clamp(32px, 5vw, 52px);
-      color: var(--white); margin-bottom: 16px;
-    }
-    .cta-section h2 em { font-style: italic; color: var(--accent-mid); }
-    .cta-section p {
-      font-size: 18px; color: rgba(255,255,255,0.6);
-      margin-bottom: 40px; font-weight: 300;
-    }
-    .cta-section .btn-primary {
-      font-size: 16px; padding: 15px 36px; border-radius: 10px;
-    }
-    .cta-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
-
-    /* ── Footer ── */
-    footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 48px 24px 32px;
-      color: rgba(255,255,255,0.5);
-    }
-    .footer-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-    }
-    .footer-brand .nav-logo { color: var(--white); }
-    .footer-brand p {
-      margin-top: 12px; font-size: 13px;
-      color: rgba(255,255,255,0.4); line-height: 1.7;
-      max-width: 240px;
-    }
-    .footer-col h4 {
-      font-size: 12px; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: rgba(255,255,255,0.6); margin-bottom: 16px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 10px; }
-    .footer-col a {
-      text-decoration: none; font-size: 14px;
-      color: rgba(255,255,255,0.4);
-      transition: color 0.2s;
-    }
-    .footer-col a:hover { color: var(--white); }
-    .footer-bottom {
-      max-width: 1100px; margin: 40px auto 0;
-      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px;
-      font-size: 13px; color: rgba(255,255,255,0.3);
-    }
-
-    @media (max-width: 900px) {
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    /* ── Animations ── */
-    .fade-up {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .fade-up-d1 { transition-delay: 0.1s; }
-    .fade-up-d2 { transition-delay: 0.2s; }
-    .fade-up-d3 { transition-delay: 0.3s; }
   </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ══════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════ -->
-<nav>
+<nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Note<span>To</span>Mail</a>
+    <a href="/" class="nav-logo">Note<span>To</span>Mail</a>
     <ul class="nav-links">
-      <li><a href="#how-it-works">How it works</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="help-guide.html" >Help Guide</a></li>
+      <li class="nav-item-dd" data-open="false">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Product <span class="caret" aria-hidden="true"></span></button>
+        <ul class="nav-menu">
+            <li><a href="/meeting-intelligence">Meeting Intelligence<small>Turn conversations into structured insight</small></a></li>
+            <li><a href="/journey-intelligence">Journey Intelligence<small>Compare related meetings across a Journey</small></a></li>
+            <li><a href="/meeting-comparison">Meeting Comparison<small>Compare related meetings side by side</small></a></li>
+            <li><a href="/ask-my-notes">Ask My Notes<small>Ask questions about your meeting content</small></a></li>
+            <li><a href="/meeting-search">Meeting Search<small>Keyword and semantic search across your history</small></a></li>
+        </ul>
+      </li>
+      <li class="nav-item-dd" data-open="false">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Use cases <span class="caret" aria-hidden="true"></span></button>
+        <ul class="nav-menu">
+            <li><a href="/sales-meeting-intelligence">Sales meetings<small>Requirements, objections and commitments</small></a></li>
+            <li><a href="/interview-meeting-analysis">Interviews<small>Structured review of interview conversations</small></a></li>
+            <li><a href="/journey-intelligence">Client &amp; project meetings<small>Understand a relationship across meetings</small></a></li>
+        </ul>
+      </li>
+      <li><a href="/#how-it-works">How it works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/blog/blog-index.html">Blog</a></li>
+      <li><a href="/support.html">Support</a></li>
     </ul>
     <div class="nav-cta">
       <a href="https://app.notetomail.com/signin" class="btn-ghost">Sign in</a>
-      <a href="https://app.notetomail.com/signup" class="btn-primary">Start free →</a>
+      <a href="https://app.notetomail.com/signup" class="btn-primary">Start free &rarr;</a>
     </div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#how-it-works" onclick="toggleMenu()">How it works</a>
-  <a href="#features" onclick="toggleMenu()">Features</a>
-  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
-  <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="support.html" onclick="toggleMenu()">Support</a>
-  <a href="https://app.notetomail.com/signin" onclick="toggleMenu()">Sign in</a>
-  <a href="https://app.notetomail.com/signup" class="btn-primary" style="text-align:center;margin-top:8px;" onclick="toggleMenu()">Start free →</a>
+  <span class="mm-label">Product</span>
+  <a href="/meeting-intelligence">Meeting Intelligence</a>
+  <a href="/journey-intelligence">Journey Intelligence</a>
+  <a href="/meeting-comparison">Meeting Comparison</a>
+  <a href="/ask-my-notes">Ask My Notes</a>
+  <a href="/meeting-search">Meeting Search</a>
+  <span class="mm-label">Use cases</span>
+  <a href="/sales-meeting-intelligence">Sales meetings</a>
+  <a href="/interview-meeting-analysis">Interviews</a>
+  <span class="mm-label">More</span>
+  <a href="/#how-it-works">How it works</a>
+  <a href="/#pricing">Pricing</a>
+  <a href="/blog/blog-index.html">Blog</a>
+  <a href="/support.html">Support</a>
+  <a href="/help-guide.html">Help Guide</a>
+  <a href="https://app.notetomail.com/signin">Sign in</a>
+  <a href="https://app.notetomail.com/signup" class="btn-primary" style="text-align:center;margin-top:14px;">Start free &rarr;</a>
 </div>
+<main id="main">
 
 <!-- ══════════════════════════════════════════════
      HERO
@@ -652,15 +435,20 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-badge fade-up">AI-powered meeting assistant</div>
+        <div class="hero-badge fade-up">AI Meeting Intelligence</div>
         <h1 class="fade-up fade-up-d1">
-          Turn messy notes into <em>professional emails</em>
+          Turn meetings into <em>intelligence.</em>
         </h1>
         <p class="hero-sub fade-up fade-up-d2">
-          Record a meeting or paste your notes — AI extracts decisions, actions and risks, then generates a polished, ready-to-send email in seconds.
+          NoteToMail captures and analyses your conversations, uncovers the decisions, actions and risks,
+          lets you search and question your meeting history, compare related meetings and understand how
+          conversations develop over time.
+        </p>
+        <p class="hero-sub-alt fade-up fade-up-d2">
+          <strong>And when the meeting is over</strong>, turn those insights into a professional follow-up in seconds.
         </p>
         <div class="hero-actions fade-up fade-up-d3">
-          <a href="https://app.notetomail.com/signup" class="btn-primary btn-primary-lg">Start for free →</a>
+          <a href="https://app.notetomail.com/signup" class="btn-primary btn-primary-lg">Start for free &rarr;</a>
           <a href="#how-it-works" class="btn-outline btn-primary-lg">See how it works</a>
         </div>
         <p class="hero-note fade-up fade-up-d3">
@@ -677,24 +465,30 @@
             <span>NoteToMail</span>
           </div>
           <div class="app-card-body">
-            <div class="app-label">Your notes</div>
+            <div class="app-label">Meeting intelligence</div>
             <div class="app-note-box">
               Phase 1 delivery confirmed for May.<br>
               Emma to send updated proposal.<br>
               Approval needed before Friday.<br>
               Risk: timeline tight if sign-off delayed.
             </div>
-            <div class="app-arrow">↓ AI analysis + email generation</div>
+            <div class="app-chips">
+              <span class="app-chip">1 decision</span>
+              <span class="app-chip">2 actions</span>
+              <span class="app-chip">1 risk</span>
+              <span class="app-chip">3rd meeting with this client</span>
+            </div>
+            <div class="app-arrow">&darr; Search it, ask it, compare it &mdash; or act on it</div>
             <div class="app-email-box">
-              <strong>Subject: Project Update — Phase 1 Delivery</strong>
+              <strong>Subject: Project Update &mdash; Phase 1 Delivery</strong>
               Hi Emma,<br><br>
               Phase 1 delivery is confirmed for May. Please send the updated proposal ahead of Friday's approval deadline.<br><br>
-              <em style="color:var(--accent-mid)">⚠ Risk noted: timeline is tight if sign-off is delayed.</em>
+              <em style="color:var(--accent-mid)">&#9888; Risk noted: timeline is tight if sign-off is delayed.</em>
             </div>
           </div>
         </div>
-        <div class="floating-tag tag-1">🧠 AI analysis <span style="color:var(--accent)">✓</span></div>
-        <div class="floating-tag tag-2">🌍 40+ languages</div>
+        <div class="floating-tag tag-1">&#128506; Journey view <span style="color:var(--accent)">&#10003;</span></div>
+        <div class="floating-tag tag-2">&#128269; Semantic search</div>
       </div>
     </div>
   </div>
@@ -705,45 +499,117 @@
 ══════════════════════════════════════════════ -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-item"><span>🔒</span> Your notes are never stored</div>
-    <div class="trust-item"><span>🇬🇧</span> UK GDPR compliant</div>
-    <div class="trust-item"><span>🌍</span> Works in 40+ languages</div>
-    <div class="trust-item"><span>⚡</span> Results in seconds</div>
-    <div class="trust-item"><span>🎙</span> Voice recording included</div>
+    <div class="trust-item"><span>&#128274;</span> Encrypted &amp; GDPR compliant storage</div>
+    <div class="trust-item"><span>&#127468;&#127463;</span> UK GDPR compliant</div>
+    <div class="trust-item"><span>&#127758;</span> Works in 40+ languages</div>
+    <div class="trust-item"><span>&#9889;</span> Results in seconds</div>
+    <div class="trust-item"><span>&#127897;</span> Voice recording included</div>
+    <div class="trust-item"><span>&#128241;</span> Works on any device &mdash; no app download needed</div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════
-     HOW IT WORKS
+     PRODUCT STORY
 ══════════════════════════════════════════════ -->
 <section class="section" id="how-it-works">
   <div class="container">
     <div class="text-center fade-up">
       <span class="section-label">How it works</span>
-      <h2 class="section-title">Three steps to a perfect email</h2>
-      <p class="section-sub">From rough notes to polished email in under 30 seconds.</p>
+      <h2 class="section-title">From a conversation to something you can use</h2>
+      <p class="section-sub">
+        Capture the meeting, understand it, find it again later, connect it to the meetings around it,
+        see what changed &mdash; and then act on it.
+      </p>
     </div>
 
-    <div class="steps-grid">
-      <div class="step-card fade-up fade-up-d1">
-        <div class="step-num">01</div>
-        <div class="step-icon">📝</div>
-        <h3>Add your notes</h3>
-        <p>Paste typed notes, upload a transcript, or record directly in the app. Works in any language — NoteToMail handles the rest.</p>
+    <div class="story-grid">
+      <div class="story-card fade-up">
+        <div class="story-num">01</div>
+        <div class="story-icon" aria-hidden="true">&#127897;</div>
+        <h3>Capture</h3>
+        <p>Record a meeting, event or lecture in the browser, upload an existing audio, video or text file, or simply
+        paste the notes you already took. On Pro, bring in Teams, Zoom and Google Meet calls. Works in 40+ languages.</p>
       </div>
-      <div class="step-card fade-up fade-up-d2">
-        <div class="step-num">02</div>
-        <div class="step-icon">🧠</div>
-        <h3>AI understands your meeting</h3>
-        <p>Automatically extracts key takeaways, decisions made, action items with owners, risks and blockers — so nothing gets missed.</p>
+      <div class="story-card fade-up fade-up-d1">
+        <div class="story-num">02</div>
+        <div class="story-icon" aria-hidden="true">&#129504;</div>
+        <h3>Understand</h3>
+        <p>AI turns the conversation into structured intelligence: a summary, the key points, the decisions made,
+        the action items and their owners, the risks raised and what to do next &mdash; adapted to the kind of meeting it was.</p>
+        <a class="card-link" href="/meeting-intelligence">What meeting intelligence means &rarr;</a>
       </div>
-      <div class="step-card fade-up fade-up-d3">
-        <div class="step-num">03</div>
-        <div class="step-icon">📧</div>
-        <h3>Send with confidence</h3>
-        <p>A polished, professional email is generated instantly. Edit, copy, or send directly to Gmail, Outlook or Yahoo — in one click.</p>
+      <div class="story-card fade-up fade-up-d2">
+        <div class="story-num">03</div>
+        <div class="story-icon" aria-hidden="true">&#128269;</div>
+        <h3>Search &amp; ask</h3>
+        <p>Saved meetings build a history you can actually use. Find things by keyword, or by meaning with semantic
+        search &mdash; then ask a question in plain language instead of rereading the transcript.</p>
+        <a class="card-link" href="/ask-my-notes">See Ask My Notes &rarr;</a>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-num">04</div>
+        <div class="story-icon" aria-hidden="true">&#128279;</div>
+        <h3>Connect</h3>
+        <p>Meetings don't happen in isolation. Organise meetings by client, company, engagement or journey, and
+        bring related conversations together into a Journey in the order they happened.</p>
+      </div>
+      <div class="story-card fade-up fade-up-d1">
+        <div class="story-num">05</div>
+        <div class="story-icon" aria-hidden="true">&#9878;</div>
+        <h3>Compare &amp; learn</h3>
+        <p>Put related meetings side by side and see what changed: which issues were resolved, which keep coming back,
+        where decisions progressed and where the emphasis shifted.</p>
+        <a class="card-link" href="/meeting-comparison">How comparison works &rarr;</a>
+      </div>
+      <div class="story-card fade-up fade-up-d2">
+        <div class="story-num">06</div>
+        <div class="story-icon" aria-hidden="true">&#9993;</div>
+        <h3>Act</h3>
+        <p>Turn the intelligence into a professional follow-up email with the decisions, actions and risks already in it.
+        Edit it, then open it in Gmail, Outlook or Yahoo in one click.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     JOURNEY INTELLIGENCE
+══════════════════════════════════════════════ -->
+<section class="section band-dark" id="journey">
+  <div class="container">
+    <div class="fade-up" style="max-width:760px;">
+      <span class="section-label">Journey Intelligence</span>
+      <h2 class="section-title">Don't just remember the meeting. Understand the journey.</h2>
+      <p class="section-sub" style="max-width:none;">
+        A single meeting tells you what happened today. A journey helps you understand how the conversation,
+        decisions and relationship have evolved across multiple meetings.
+      </p>
+    </div>
+
+    <div class="flow fade-up fade-up-d1" style="margin-top:44px;">
+      <div class="flow-step"><div class="flow-kicker">Meeting 1</div><strong>Discovery</strong></div>
+      <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+      <div class="flow-step"><div class="flow-kicker">Meeting 2</div><strong>Technical discussion</strong></div>
+      <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+      <div class="flow-step"><div class="flow-kicker">Meeting 3</div><strong>Commercial discussion</strong></div>
+      <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+      <div class="flow-step"><div class="flow-kicker">Meeting 4</div><strong>Follow-up</strong></div>
+      <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+      <div class="flow-step is-accent"><div class="flow-kicker">Across all four</div><strong>Journey Intelligence</strong></div>
+    </div>
+
+    <div class="q-grid fade-up fade-up-d2">
+      <div class="q-item">What changed between meetings?</div>
+      <div class="q-item">Which issues were resolved?</div>
+      <div class="q-item">What remains outstanding?</div>
+      <div class="q-item">How did priorities change?</div>
+      <div class="q-item">What decisions progressed?</div>
+      <div class="q-item">What should I remember before the next conversation?</div>
+    </div>
+
+    <p class="fade-up fade-up-d3" style="margin-top:36px;">
+      <a href="/journey-intelligence" class="btn-primary btn-primary-lg">Explore Journey Intelligence &rarr;</a>
+    </p>
   </div>
 </section>
 
@@ -754,40 +620,73 @@
   <div class="container">
     <div class="text-center fade-up">
       <span class="section-label" style="color:rgba(255,255,255,0.4)">Features</span>
-      <h2 class="section-title" style="color:var(--white)">Everything you need, nothing you don't</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.5);margin:0 auto;">Built for professionals who spend too much time writing follow-up emails.</p>
+      <h2 class="section-title" style="color:var(--white)">More than an AI note taker</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.5);margin:0 auto;">
+        Individual meeting intelligence, a searchable history you can question, related meetings you can compare,
+        and a professional follow-up at the end of it &mdash; without the complexity of an enterprise rollout.
+      </p>
     </div>
 
     <div class="features-grid">
       <div class="feat-card fade-up">
-        <span class="feat-icon">🎙</span>
-        <h3>Voice Recording</h3>
-        <p>Record meetings directly in the app. Audio is transcribed automatically with speaker-level accuracy.</p>
+        <span class="feat-icon" aria-hidden="true">&#127897;</span>
+        <h3>Voice Recording &amp; Upload</h3>
+        <p>Record meetings, events and lectures directly in the app &mdash; or upload existing audio, video, PDFs and documents. Any source, any format.</p>
       </div>
       <div class="feat-card fade-up fade-up-d1">
-        <span class="feat-icon">🧠</span>
+        <span class="feat-icon" aria-hidden="true">&#129504;</span>
         <h3>AI Analysis</h3>
-        <p>Decisions, action items, risks and key takeaways are extracted automatically — no manual highlighting needed.</p>
+        <p>Decisions, action items, risks and key takeaways are extracted automatically &mdash; no manual highlighting needed. <a href="/meeting-intelligence">See what you get</a>.</p>
       </div>
       <div class="feat-card fade-up fade-up-d2">
-        <span class="feat-icon">🌍</span>
+        <span class="feat-icon" aria-hidden="true">&#127758;</span>
         <h3>40+ Languages</h3>
-        <p>Record or paste notes in any language. Output is generated in clear, professional English.</p>
+        <p>Record or paste notes in any language. Choose your output language for both analysis and email independently.</p>
       </div>
       <div class="feat-card fade-up">
-        <span class="feat-icon">🔍</span>
+        <span class="feat-icon" aria-hidden="true">&#128172;</span>
         <h3>Ask My Notes</h3>
-        <p>Ask questions about your meeting content. "What were the risks?" or "Who owns the budget task?" — answered instantly.</p>
+        <p>Ask questions about your meeting content. &ldquo;What were the risks?&rdquo; or &ldquo;Who owns the budget task?&rdquo; &mdash; answered instantly. <a href="/ask-my-notes">More</a>.</p>
       </div>
       <div class="feat-card fade-up fade-up-d1">
-        <span class="feat-icon">📧</span>
-        <h3>One-click Send</h3>
-        <p>Open your generated email directly in Gmail, Outlook or Yahoo. No copy-pasting required.</p>
+        <span class="feat-icon" aria-hidden="true">&#128190;</span>
+        <h3>Meeting History <span class="pro-badge">Pro</span></h3>
+        <p>Every meeting is automatically saved &mdash; transcript, AI analysis and generated email all in one place. Revisit any past meeting whenever you need it.</p>
       </div>
       <div class="feat-card fade-up fade-up-d2">
-        <span class="feat-icon">🔒</span>
-        <h3>Privacy First</h3>
-        <p>Your notes and recordings are never stored after processing. UK GDPR compliant. No data used for AI training.</p>
+        <span class="feat-icon" aria-hidden="true">&#128270;</span>
+        <h3>Search Meetings <span class="pro-badge">Pro</span></h3>
+        <p>Find any meeting using keyword or semantic search &mdash; by topic, decision, person or phrase, even if you don't remember the exact words. <a href="/meeting-search">More</a>.</p>
+      </div>
+      <div class="feat-card fade-up">
+        <span class="feat-icon" aria-hidden="true">&#9878;</span>
+        <h3>Compare Meetings <span class="pro-badge">Pro</span></h3>
+        <p>Compare two or more meetings side by side. Spot patterns, track progress on recurring topics and see how decisions evolve. <a href="/meeting-comparison">More</a>.</p>
+      </div>
+      <div class="feat-card fade-up fade-up-d1">
+        <span class="feat-icon" aria-hidden="true">&#128506;</span>
+        <h3>Journey Intelligence</h3>
+        <p>Bring related meetings together into a Journey, then compare them to understand what changed across the conversation. <a href="/journey-intelligence">More</a>.</p>
+      </div>
+      <div class="feat-card fade-up fade-up-d2">
+        <span class="feat-icon" aria-hidden="true">&#9993;</span>
+        <h3>Professional Follow-up</h3>
+        <p>Generate a structured follow-up email from the analysis, then open it directly in Gmail, Outlook or Yahoo. No copy-pasting required.</p>
+      </div>
+      <div class="feat-card fade-up">
+        <span class="feat-icon" aria-hidden="true">&#128274;</span>
+        <h3>Privacy &amp; Security First</h3>
+        <p>Your meetings are encrypted and stored securely in compliance with UK GDPR. Data is automatically archived after 12 months. We never use your content to train AI models.</p>
+      </div>
+      <div class="feat-card fade-up fade-up-d1">
+        <span class="feat-icon" aria-hidden="true">&#128202;</span>
+        <h3>Meeting-aware Analysis</h3>
+        <p>A project meeting and a training session aren't the same thing. NoteToMail detects the kind of content you gave it and adapts what it extracts.</p>
+      </div>
+      <div class="feat-card fade-up fade-up-d2">
+        <span class="feat-icon" aria-hidden="true">&#128241;</span>
+        <h3>Nothing to Install</h3>
+        <p>NoteToMail runs in the browser on any device. No downloads, no plugins, no IT project to get started.</p>
       </div>
     </div>
   </div>
@@ -801,37 +700,63 @@
     <div class="text-center fade-up">
       <span class="section-label">Live example</span>
       <h2 class="section-title">See the transformation</h2>
-      <p class="section-sub">Raw meeting notes become a structured, professional email.</p>
+      <p class="section-sub">Raw meeting notes become structured intelligence &mdash; and then a professional email.</p>
     </div>
 
     <div class="demo-grid">
       <div class="demo-card fade-up">
-        <span class="demo-card-label label-input">Input — Meeting notes</span>
+        <span class="demo-card-label label-input">Input &mdash; Meeting notes</span>
         <p class="demo-text">
           Q2 review with Sarah and Tom.<br><br>
-          Budget approved for new hire — <strong>Sarah to post job by end of month.</strong><br>
-          Website redesign delayed — <strong>Tom to chase agency Friday.</strong><br>
+          Budget approved for new hire &mdash; <strong>Sarah to post job by end of month.</strong><br>
+          Website redesign delayed &mdash; <strong>Tom to chase agency Friday.</strong><br>
           Risk: if agency misses deadline, launch slips to Q3.<br>
           Next meeting in 2 weeks.
         </p>
       </div>
 
-      <div class="demo-arrow fade-up fade-up-d1">→</div>
+      <div class="demo-arrow fade-up fade-up-d1" aria-hidden="true">&rarr;</div>
 
       <div class="demo-card fade-up fade-up-d2">
-        <span class="demo-card-label label-output">Output — Generated email</span>
+        <span class="demo-card-label label-output">Output &mdash; Analysis &amp; email</span>
         <p class="demo-text">
-          <strong>Subject: Q2 Review — Actions &amp; Next Steps</strong><br><br>
+          <strong>Subject: Q2 Review &mdash; Actions &amp; Next Steps</strong><br><br>
           Hi Sarah, Tom,<br><br>
           Thanks for joining today's Q2 review. Here's a summary:<br><br>
           <strong>Decisions:</strong> Budget approved for new hire.<br>
           <strong>Action items:</strong><br>
-          • Sarah — Post job listing by end of month<br>
-          • Tom — Chase agency by Friday<br><br>
-          <strong>⚠ Risk:</strong> Agency delay may push launch to Q3.<br><br>
+          &bull; Sarah &mdash; Post job listing by end of month<br>
+          &bull; Tom &mdash; Chase agency by Friday<br><br>
+          <strong>&#9888; Risk:</strong> Agency delay may push launch to Q3.<br><br>
           Next meeting in 2 weeks. Please confirm actions at your earliest.
         </p>
       </div>
+    </div>
+
+    <p class="text-center fade-up fade-up-d3" style="margin-top:32px;font-size:14px;color:var(--ink-muted);">
+      Two weeks later, that meeting is still searchable, still answerable, and ready to compare with the next one.
+      <a href="/meeting-intelligence" style="color:var(--accent);font-weight:600;text-decoration:none;">See the full picture &rarr;</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     USE CASES
+══════════════════════════════════════════════ -->
+<section class="section band-white" id="use-cases">
+  <div class="container">
+    <div class="text-center fade-up">
+      <span class="section-label">Where people use it</span>
+      <h2 class="section-title">Built for professionals and small teams</h2>
+      <p class="section-sub">Deeper meeting intelligence without needing a complex enterprise platform behind it.</p>
+    </div>
+    <div class="next-links fade-up fade-up-d1">
+      <a class="next-link" href="/sales-meeting-intelligence"><strong>Sales conversations</strong><span>Requirements, objections and commitments across an opportunity.</span></a>
+      <a class="next-link" href="/journey-intelligence"><strong>Client &amp; consulting work</strong><span>Follow an engagement from first conversation to delivery.</span></a>
+      <a class="next-link" href="/interview-meeting-analysis"><strong>Interviews</strong><span>A structured review of what was actually discussed.</span></a>
+      <a class="next-link" href="/meeting-comparison"><strong>Project &amp; stakeholder meetings</strong><span>Spot the risk that keeps reappearing week after week.</span></a>
+      <a class="next-link" href="/meeting-search"><strong>Business development</strong><span>Find the right past conversation before the next one.</span></a>
+      <a class="next-link" href="/ask-my-notes"><strong>Lectures &amp; training</strong><span>Ask your own notes instead of rereading them.</span></a>
     </div>
   </div>
 </section>
@@ -851,15 +776,15 @@
       <!-- Free -->
       <div class="price-card fade-up">
         <div class="price-name">Free</div>
-        <div class="price-amount"><sup>£</sup>0</div>
+        <div class="price-amount"><sup>&pound;</sup>0</div>
         <div class="price-period">forever</div>
-        <div class="price-desc">Try the basics — no credit card needed.</div>
+        <div class="price-desc">Try the basics &mdash; no credit card needed.</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>30 transcription minutes / month</li>
-          <li>100 AI emails / month</li>
-          <li>Voice recording</li>
-          <li>AI analysis</li>
+          <li>30 AI minutes / month</li>
+          <li>100 AI calls / month</li>
+          <li>Voice recording &amp; file upload</li>
+          <li>AI analysis &amp; email generation</li>
           <li>40+ languages</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=free" class="price-cta price-cta-outline">Get started free</a>
@@ -868,16 +793,17 @@
       <!-- Pro Monthly -->
       <div class="price-card fade-up fade-up-d1">
         <div class="price-name">Pro Monthly</div>
-        <div class="price-amount"><sup>£</sup>13<span style="font-size:28px">.99</span></div>
+        <div class="price-amount"><sup>&pound;</sup>13<span style="font-size:28px">.99</span></div>
         <div class="price-period">per month</div>
         <div class="price-desc">For professionals who meet regularly.</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>3,000 transcription minutes / month</li>
-          <li>5,000 AI emails / month</li>
+          <li>3,000 AI minutes / month</li>
+          <li>5,000 AI calls / month</li>
           <li>Everything in Free</li>
-          <li>Ask My Notes AI feature</li>
-          <li>Priority processing</li>
+          <li>Save &amp; search all meetings</li>
+          <li>Compare meetings side by side</li>
+          <li>Join Teams, Zoom &amp; Meet calls</li>
           <li>Cancel anytime</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=pro&billing=monthly" class="price-cta price-cta-filled">Start Pro Monthly</a>
@@ -885,23 +811,28 @@
 
       <!-- Pro Annual -->
       <div class="price-card featured fade-up fade-up-d2">
-        <div class="price-badge">Save 20% — Best value</div>
+        <div class="price-badge">Save 20% &mdash; Best value</div>
         <div class="price-name">Pro Annual</div>
-        <div class="price-amount"><sup>£</sup>139</div>
-        <div class="price-period">per year <span style="color:var(--accent);font-weight:600">(£11.58/mo)</span></div>
-        <div class="price-desc">Same great features, two months free.</div>
+        <div class="price-amount"><sup>&pound;</sup>139</div>
+        <div class="price-period">per year <span style="color:var(--accent);font-weight:600">(&pound;11.58/mo)</span></div>
+        <div class="price-desc">More minutes, more AI calls, best value.</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>Unlimited transcription minutes</li>
-          <li>Unlimited AI emails</li>
+          <li>5,000 AI minutes / month</li>
+          <li>8,000 AI calls / month</li>
           <li>Everything in Pro Monthly</li>
-          <li>Ask My Notes AI feature</li>
-          <li>Priority processing</li>
+          <li>Save &amp; search all meetings</li>
+          <li>Compare meetings side by side</li>
+          <li>Join Teams, Zoom &amp; Meet calls</li>
           <li>Cancel anytime</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=pro&billing=annual" class="price-cta price-cta-filled">Start Pro Annual</a>
       </div>
     </div>
+
+    <p style="text-align:center;font-size:13px;color:var(--ink-muted);margin-top:16px;font-style:italic;">
+      1 AI minute &asymp; 1 minute of recording or ~150 words of notes &middot; 1 AI call = one analysis or email generation
+    </p>
 
     <p class="text-center fade-up" style="margin-top:32px;font-size:13px;color:var(--ink-muted)">
       All plans include a 48-hour satisfaction guarantee. Subscriptions renew automatically. Cancel anytime before renewal.
@@ -921,51 +852,72 @@
 
     <div class="faq-list">
       <div class="faq-item fade-up">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
+          What is the difference between meeting notes and meeting intelligence?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Notes and transcripts record what was said. Meeting intelligence goes further: NoteToMail analyses the conversation into a summary, key takeaways, decisions, action items and risks, saves it to a searchable history you can question, and lets you compare it with related meetings to see what changed. The follow-up email is generated from that intelligence rather than written from scratch. <a href="/meeting-intelligence" style="color:var(--accent)">Read more about meeting intelligence</a>.</div></div>
+      </div>
+      <div class="faq-item fade-up fade-up-d1">
+        <button class="faq-q" type="button" aria-expanded="false">
+          What is Journey Intelligence?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Journey Intelligence helps you understand a series of related meetings as one evolving conversation. Bring meetings together into a Journey, compare them, and surface evidence-backed changes, strengths, differences and recurring themes across the meetings. <a href="/journey-intelligence" style="color:var(--accent)">See how it works</a>.</div></div>
+      </div>
+      <div class="faq-item fade-up fade-up-d2">
+        <button class="faq-q" type="button" aria-expanded="false">
+          How is semantic search different from normal search?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Keyword search matches the exact words you type &mdash; useful when you remember a name or phrase. Semantic search matches meaning, so searching &ldquo;budget discussion&rdquo; will find meetings where finances were discussed even if those exact words were never used. Both are available on Pro plans. <a href="/meeting-search" style="color:var(--accent)">More on meeting search</a>.</div></div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-q" type="button" aria-expanded="false">
           What counts as one AI email?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Each time you click Generate Email, that counts as one AI email. Editing or copying the generated email does not use any additional credits.</div></div>
       </div>
       <div class="faq-item fade-up fade-up-d1">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           Can I upload voice recordings?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Yes. You can record directly in the app using your microphone, or upload audio and video files. Recordings are transcribed automatically and transcription minutes are deducted from your plan allowance.</div></div>
       </div>
       <div class="faq-item fade-up fade-up-d2">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           Is my meeting data private?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Your notes, recordings, and generated emails are processed to produce your results and are never stored after processing. We do not use your content to train AI models. NoteToMail is fully UK GDPR compliant.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Your meetings, notes and recordings are encrypted and stored securely in compliance with UK GDPR regulations. Data is automatically archived and deleted after 12 months. We never use your content to train AI models. Pro users can save, search and revisit their meetings at any time. We are also working on a feature to allow you to store your meetings in your own shared storage area &mdash; coming soon.</div></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           What languages does it support?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">NoteToMail supports over 40 languages for input — including English, French, Spanish, German, Hindi, Arabic, Mandarin and more. Output emails are currently generated in English.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">NoteToMail supports over 40 languages for input &mdash; including English, French, Spanish, German, Hindi, Arabic, Mandarin and more. You can choose your analysis output language and email output language independently.</div></div>
       </div>
       <div class="faq-item fade-up fade-up-d1">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           Can I cancel anytime?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Yes. You can cancel your subscription at any time from your dashboard. You keep Pro access until the end of your current billing period, then your account automatically moves to the Free plan. No partial refunds are issued.</div></div>
       </div>
       <div class="faq-item fade-up fade-up-d2">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           Do you offer refunds?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">We offer a 48-hour satisfaction guarantee. If you subscribed within the last 48 hours and have not meaningfully used the service, you can request a full refund from your dashboard. After 48 hours, all payments are non-refundable.</div></div>
       </div>
       <div class="faq-item fade-up">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button class="faq-q" type="button" aria-expanded="false">
           Does it work for non-meeting notes?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">Yes. NoteToMail automatically detects whether your notes are from a business meeting or other content (lectures, training sessions, research notes, etc.) and adapts its analysis accordingly.</div></div>
       </div>
@@ -978,34 +930,45 @@
 ══════════════════════════════════════════════ -->
 <section class="cta-section">
   <div class="container">
-    <h2 class="fade-up">Ready to write your <em>last</em> manual follow-up?</h2>
-    <p class="fade-up fade-up-d1">Join professionals saving hours every week with NoteToMail.</p>
-    <a href="https://app.notetomail.com/signup" class="btn-primary fade-up fade-up-d2">Start for free →</a>
-    <p class="cta-note fade-up fade-up-d3">Free plan included · No credit card required · Cancel anytime</p>
+    <h2 class="fade-up">Turn your meetings into <em>intelligence.</em></h2>
+    <p class="fade-up fade-up-d1">Capture the conversation, understand it, keep it, compare it &mdash; and send the follow-up in seconds.</p>
+    <a href="https://app.notetomail.com/signup" class="btn-primary fade-up fade-up-d2">Start for free &rarr;</a>
+    <p class="cta-note fade-up fade-up-d3">Free plan included &middot; No credit card required &middot; Cancel anytime</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="nav-logo">Note<span style="color:var(--accent-mid)">To</span>Mail</a>
-      <p>AI-powered meeting notes to professional email. Built for busy professionals.</p>
-      <p style="margin-top:12px">A product by <a href="https://www.safalsolutions.co.uk" style="color:rgba(255,255,255,0.4);text-decoration:none;" target="_blank">SafalSolutions Ltd</a></p>
+      <a href="/" class="nav-logo">Note<span style="color:var(--accent-mid)">To</span>Mail</a>
+      <p>AI meeting intelligence for understanding individual meetings and the journey across them.</p>
+      <p class="footer-tagline">Capture &middot; Analyse &middot; Search &middot; Ask &middot; Compare &middot; Follow up</p>
+      <p style="margin-top:12px">A product by <a href="https://www.safalsolutions.co.uk" style="color:rgba(255,255,255,0.4);text-decoration:none;" target="_blank" rel="noopener">SafalSolutions Ltd</a></p>
     </div>
     <div class="footer-col">
-      <h4>Product</h4>
+      <h2>Product</h2>
       <ul>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/meeting-intelligence">Meeting Intelligence</a></li>
+        <li><a href="/journey-intelligence">Journey Intelligence</a></li>
+        <li><a href="/meeting-comparison">Meeting Comparison</a></li>
+        <li><a href="/ask-my-notes">Ask My Notes</a></li>
+        <li><a href="/meeting-search">Meeting Search</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Account</h4>
+      <h2>Use cases</h2>
+      <ul>
+        <li><a href="/sales-meeting-intelligence">Sales meetings</a></li>
+        <li><a href="/interview-meeting-analysis">Interviews</a></li>
+        <li><a href="/journey-intelligence">Client meetings</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2>Account</h2>
       <ul>
         <li><a href="https://app.notetomail.com/signup">Sign up free</a></li>
         <li><a href="https://app.notetomail.com/signin">Sign in</a></li>
@@ -1014,10 +977,12 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h2>Company</h2>
       <ul>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/help-guide.html">Help Guide</a></li>
+        <li><a href="/blog/blog-index.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li><a href="https://app.notetomail.com/legal/terms">Terms of Service</a></li>
         <li><a href="https://app.notetomail.com/legal/privacy">Privacy Policy</a></li>
       </ul>
@@ -1025,36 +990,11 @@
   </div>
 
   <div class="footer-bottom">
-    <span>© 2026 NoteToMail · SafalSolutions Ltd · Registered in England and Wales</span>
+    <span>&copy; 2026 NoteToMail &middot; SafalSolutions Ltd &middot; Registered in England and Wales</span>
     <span>support@notetomail.com</span>
   </div>
 </footer>
 
-<script>
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  // FAQ accordion
-  function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  }
-
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Built NoteToMail — A Founder's Story | NoteToMail</title>
+  <link rel="canonical" href="https://notetomail.com/blog/how-we-built-notetomail.html" />
+  <meta property="og:title" content="How We Built NoteToMail &mdash; A Founder's Story | NoteToMail" />
+  <meta property="og:description" content="The real story of how NoteToMail was built, from a two-year-old idea to a live AI product: choosing models, designing the UI and shipping it." />
+  <meta property="og:url" content="https://notetomail.com/blog/how-we-built-notetomail.html" />
+  <meta property="og:site_name" content="NoteToMail" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://notetomail.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How We Built NoteToMail &mdash; A Founder's Story | NoteToMail" />
+  <meta name="twitter:description" content="The real story of how NoteToMail was built, from a two-year-old idea to a live AI product: choosing models, designing the UI and shipping it." />
+  <meta name="twitter:image" content="https://notetomail.com/og-image.png" />
+  <meta name="description" content="The real story of how NoteToMail was built, from a two-year-old idea to a live AI product: choosing models, designing the UI and shipping it.">
+  <meta name="keywords" content="how to build an AI product, founder story, NoteToMail, AI app development, Next.js, build AI startup">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!---linkedln-->
+  <script type="text/javascript">
+  _linkedin_partner_id = "8895330";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script><script type="text/javascript">
+  (function(l) {
+  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+  window.lintrk.q=[]}
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8895330&fmt=gif" />
+  </noscript>
+  <style>
+    :root {
+      --ink: #0f1923;
+      --ink-soft: #3d4f5e;
+      --ink-muted: #7a8e9c;
+      --paper: #f7f5f0;
+      --paper-warm: #edeae3;
+      --accent: #1a6b4a;
+      --accent-lt: #e8f5ee;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--paper-warm);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-brand span { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--paper-warm);
+      padding: 64px 24px 48px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--accent-lt);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(30px, 5vw, 50px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-meta {
+      font-size: 14px;
+      color: var(--ink-muted);
+      margin-top: 16px;
+    }
+    .hero-meta span { margin: 0 8px; }
+
+    .article-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+
+    .article-wrap h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+
+    .article-wrap h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 32px 0 12px;
+    }
+
+    .article-wrap p {
+      font-size: 17px;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .article-wrap ul {
+      margin: 0 0 20px 24px;
+    }
+
+    .article-wrap li {
+      font-size: 17px;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .article-wrap strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .callout {
+      background: var(--accent-lt);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .callout p {
+      color: var(--ink);
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .lesson {
+      background: var(--white);
+      border: 1px solid var(--paper-warm);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .lesson-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .lesson p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--paper-warm);
+      margin: 48px 0;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #0f3d2e, #1a6b4a);
+      border-radius: 16px;
+      padding: 40px 36px;
+      margin: 48px 0;
+      text-align: center;
+      color: white;
+    }
+    .cta-banner h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: white;
+      margin: 0 0 10px;
+    }
+    .cta-banner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+    .cta-banner a {
+      background: white;
+      color: var(--accent);
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-block;
+    }
+    .cta-banner .sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      margin: 12px 0 0;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer a { color: #4ade80; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 32px; }
+      .article-wrap { padding: 40px 20px; }
+      .cta-banner { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://notetomail.com" class="nav-brand">Note<span>To</span>Mail</a>
+    <a href="https://app.notetomail.com/signup" class="nav-cta">Try free →</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">🛠️ Founder Story</div>
+    <h1>How We Built NoteToMail — <em>From Idea to Live Product</em></h1>
+    <div class="hero-meta">
+      By Satyajit Singh, Co-founder <span>·</span> SafalSolutions Ltd <span>·</span> 7 min read
+    </div>
+  </div>
+
+  <div class="article-wrap">
+
+    <p>People often ask me — how did you build this? Where did you start? How long did it take? This is my honest answer.</p>
+
+    <p>NoteToMail didn't appear overnight. The idea had been sitting in my head for almost two years before a single line of code was written. And even then, the journey from first commit to a working product was longer, harder and more rewarding than I expected.</p>
+
+    <h2>It started with a frustration</h2>
+
+    <p>Like most product ideas, NoteToMail came from a problem I experienced personally. After every meeting, I found myself staring at a page of notes trying to turn them into a clear, professional follow-up email. It was repetitive, time-consuming and frankly tedious.</p>
+
+    <p>I thought — surely AI can do this. But when I looked around, nothing quite did what I wanted. There were meeting transcription tools, AI writing tools, note-taking apps — but nothing that took your raw notes and produced a proper email, ready to send.</p>
+
+    <p>So I decided to build it.</p>
+
+    <div class="callout">
+      <p>"The idea sat in my head for nearly two years. The hardest part wasn't having the idea — it was deciding to actually build it."</p>
+    </div>
+
+    <h2>The first lesson: don't just have an idea — have a design</h2>
+
+    <p>My first instinct was to dive straight into code. But I've seen too many projects fail because the builder started coding before they understood what they were building.</p>
+
+    <p>So I stopped and spent serious time on design first. Not just the visual design — the product design. What does the user experience look like? What are the core features? What are the edge cases? What could go wrong?</p>
+
+    <p>I drew architecture diagrams. I mapped out every page. I thought through what happens at each stage of the user journey. Only then did I start building.</p>
+
+    <div class="lesson">
+      <span class="lesson-label">💡 Lesson 1</span>
+      <p>Before you write a single line of code, build an architecture diagram. Map out every page, every feature, every data flow. The time you spend planning will save you ten times that in rework later.</p>
+    </div>
+
+    <h2>Choosing the right AI model</h2>
+
+    <p>One of the most important early decisions was choosing which AI model to use. This isn't a trivial choice — different models have different strengths, costs, speed profiles and context window sizes. The wrong choice early on can be very expensive to undo.</p>
+
+    <p>I spent a lot of time evaluating options, testing outputs, and thinking about what NoteToMail actually needed. Transcription accuracy. Multilingual capability. Email quality. Analysis depth. Each requirement pointed towards different solutions.</p>
+
+    <p>Eventually I settled on a combination that balanced quality, cost and reliability. But getting there took real experimentation — not just reading documentation.</p>
+
+    <div class="lesson">
+      <span class="lesson-label">💡 Lesson 2</span>
+      <p>Don't just pick the most popular AI model. Test several. Think about your specific use case — accuracy, speed, cost, language support. The right model for someone else may be the wrong model for you.</p>
+    </div>
+
+    <h2>Building feature by feature — the things you don't expect</h2>
+
+    <p>Once the architecture was clear and the model chosen, building started. And that's when all the things you didn't think of start appearing.</p>
+
+    <p>Some examples from our journey:</p>
+
+    <ul>
+      <li><strong>Content moderation</strong> — we didn't want users to be able to submit abusive content through the app. So we had to build a layer that detects and filters inappropriate input and warns the user appropriately</li>
+      <li><strong>40+ language support</strong> — supporting one language is easy. Supporting 40+ means handling different character sets, transcription accuracy variations across languages, and ensuring the output is always professional English</li>
+      <li><strong>Voice transcription</strong> — WebM audio from browsers doesn't always behave the way you expect. We went through several iterations of audio handling before getting it right</li>
+      <li><strong>Mobile responsiveness</strong> — we chose Next.js specifically so NoteToMail would work on any device without a separate app. But making it truly usable on mobile required multiple rounds of testing and UI refinement</li>
+      <li><strong>Privacy and GDPR</strong> — ensuring notes are never stored after processing required careful architecture decisions that touched every part of the system</li>
+    </ul>
+
+    <p>Each of these features added time. Some took days. Some took weeks. And new edge cases kept emerging even after we thought a feature was done.</p>
+
+    <div class="lesson">
+      <span class="lesson-label">💡 Lesson 3</span>
+      <p>Every feature you add will take longer than you think. Plan for the edge cases, not just the happy path. The things you don't expect will consume more time than the things you do.</p>
+    </div>
+
+    <h2>The UI went through many iterations</h2>
+
+    <p>We redesigned the interface multiple times. What looks good on a desktop doesn't always work on mobile. What makes sense to a developer doesn't always make sense to a first-time user.</p>
+
+    <p>We tested on different devices, different screen sizes, different browsers. We watched people use it and changed things based on where they got confused. We changed the layout, the wording, the colours, the flow.</p>
+
+    <p>This iterative process is frustrating but essential. A product that doesn't get used isn't a product — it's a portfolio piece. Making it genuinely easy to use is non-negotiable.</p>
+
+    <div class="lesson">
+      <span class="lesson-label">💡 Lesson 4</span>
+      <p>Ship early and iterate often. Don't wait for perfect — get it in front of real users as soon as it works. Their behaviour will teach you more than any amount of internal testing.</p>
+    </div>
+
+    <h2>Hosting, databases and keeping costs under control</h2>
+
+    <p>When you're building your first product, you have to be smart about costs. I'm not a VC-backed startup — I'm a founder spending my own money. Every pound counts.</p>
+
+    <p>We spent time researching hosting options, database solutions and infrastructure costs. We chose tools that could scale when needed but didn't cost a fortune to get started. Vercel for hosting. A managed database that gave us what we needed without over-engineering.</p>
+
+    <p>The temptation is always to over-architect. To build for a million users before you have ten. Resist it. Build for where you are now, with a clear eye on what you'll need to change when you grow.</p>
+
+    <div class="lesson">
+      <span class="lesson-label">💡 Lesson 5</span>
+      <p>Don't over-spend on your first product unless you have the resources to do so. Choose infrastructure that is good enough to launch and scale when needed. Keep your running costs as low as possible while you find product-market fit.</p>
+    </div>
+
+    <h2>Domain, website, and how to tell the world</h2>
+
+    <p>Building the product is only half the job. The other half is getting people to use it.</p>
+
+    <p>Choosing a domain name, building a marketing website, writing copy that explains what the product does clearly and compellingly — all of this takes time and thought. We went through several domain options before settling on notetomail.com. We redesigned the landing page multiple times. We wrote and rewrote the copy until it felt right.</p>
+
+    <p>And then we launched. And kept iterating.</p>
+
+    <h2>What I'd tell anyone starting out</h2>
+
+    <p>If someone came to me today and said they wanted to build an AI product, here's what I'd tell them:</p>
+
+    <ul>
+      <li><strong>Start with the problem, not the technology.</strong> What specific frustration are you solving? Who feels it most?</li>
+      <li><strong>Design before you build.</strong> Architecture diagram first. Every page, every feature, every flow</li>
+      <li><strong>Choose your AI model carefully.</strong> Test it, don't just trust the marketing</li>
+      <li><strong>Build story by story.</strong> One feature at a time, properly, rather than ten features half-finished</li>
+      <li><strong>Test on real devices.</strong> Mobile, tablet, desktop. Different browsers. Different users</li>
+      <li><strong>Be smart with money.</strong> Especially at the start</li>
+      <li><strong>Ship and iterate.</strong> A launched product beats a perfect unfinished one every time</li>
+    </ul>
+
+    <p>NoteToMail is live today. It works. People are using it. And we're still improving it every week.</p>
+
+    <p>It took hard work, long hours and a lot of patience. But it was worth every minute.</p>
+
+    <div class="callout">
+      <p>"The main thing is — don't just have an idea in mind. Have a design, have a product in mind, think about various things before you actually go and build."</p>
+    </div>
+
+    <div class="cta-banner">
+      <h2>Try NoteToMail today</h2>
+      <p>The product we built — turn your meeting notes into professional emails in seconds.</p>
+      <a href="https://app.notetomail.com/signup">Start free — no credit card needed →</a>
+      <div class="sub">Free plan available · Pro from £13.99/month · Works on any device</div>
+    </div>
+
+    <hr>
+
+    <p style="font-size:14px;color:var(--ink-muted);">Satyajit Singh is the co-founder of SafalSolutions Ltd, a technology company based in Reading, UK. NoteToMail is their first AI product. <a href="https://safalsolutions.co.uk" style="color:var(--accent)">safalsolutions.co.uk</a></p>
+
+  </div>
+
+  <footer>
+    <p>© 2026 NoteToMail · A product by <a href="https://safalsolutions.co.uk">SafalSolutions Ltd</a> · Reading, UK · <a href="https://notetomail.com">notetomail.com</a></p>
+  </footer>
+
+</body>
+</html>

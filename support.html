@@ -4,10 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support — NoteToMail</title>
+  <link rel="canonical" href="https://notetomail.com/support.html" />
+  <meta property="og:title" content="Support &mdash; NoteToMail" />
+  <meta property="og:description" content="Get help with NoteToMail. Guides and answers for recording, AI analysis, Ask My Notes, saved meetings, search and meeting comparison." />
+  <meta property="og:url" content="https://notetomail.com/support.html" />
+  <meta property="og:site_name" content="NoteToMail" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://notetomail.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Support &mdash; NoteToMail" />
+  <meta name="twitter:description" content="Get help with NoteToMail. Guides and answers for recording, AI analysis, Ask My Notes, saved meetings, search and meeting comparison." />
+  <meta name="twitter:image" content="https://notetomail.com/og-image.png" />
   <meta name="description" content="Get help with NoteToMail. Browse guides, FAQs and contact our support team." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <!---linkedln-->
+  <script type="text/javascript">
+  _linkedin_partner_id = "8895330";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script><script type="text/javascript">
+  (function(l) {
+  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+  window.lintrk.q=[]}
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8895330&fmt=gif" />
+  </noscript>
   <style>
     :root {
       --ink: #0f1923; --ink-soft: #3d4f5e; --ink-muted: #7a8e9c;
@@ -50,7 +81,32 @@
     .support-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
     .support-card .card-link { display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 14px; }
 
-    @media (max-width: 768px) { .support-grid { grid-template-columns: 1fr; } }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--ink); border-radius: 2px;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0; top: 64px;
+      background: var(--paper);
+      padding: 24px; z-index: 99;
+      flex-direction: column; gap: 16px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none; color: var(--ink);
+      font-size: 18px; font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--paper-warm);
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
 
     .guides-section { margin-bottom: 64px; }
     .guides-section h2 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 24px; }
@@ -58,10 +114,25 @@
     .guide-item { background: var(--white); border-radius: var(--r); padding: 24px; border: 1px solid var(--paper-warm); display: flex; gap: 16px; align-items: flex-start; transition: box-shadow 0.2s; }
     .guide-item:hover { box-shadow: var(--shadow-sm); }
     .guide-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
-    .guide-item h4 { font-size: 15px; margin-bottom: 6px; }
+    .guide-item h3 { font-size: 15px; margin-bottom: 6px; }
     .guide-item p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+    .pro-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      background: var(--accent);
+      color: white;
+      padding: 2px 7px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
 
+    @media (max-width: 900px) { .support-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) { .guide-list { grid-template-columns: 1fr; } .nav-links, .nav-cta { display: none; } }
+    @media (max-width: 620px) { .support-grid { grid-template-columns: 1fr; } }
 
     .contact-section { background: var(--white); border-radius: 16px; border: 1px solid var(--paper-warm); padding: 48px; margin-bottom: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
     .contact-section h2 { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 12px; }
@@ -91,7 +162,7 @@
     .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; }
     .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
     .footer-bottom a:hover { color: var(--white); }
-    .footer-links { display: flex; gap: 24px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
   </style>
 </head>
 <body>
@@ -101,16 +172,35 @@
     <a href="index.html" class="nav-logo">Note<span>To</span>Mail</a>
     <ul class="nav-links">
       <li><a href="index.html#how-it-works">How it works</a></li>
-      <li><a href="index.html#features">Features</a></li>
+      <li><a href="/meeting-intelligence">Meeting Intelligence</a></li>
+      <li><a href="/journey-intelligence">Journey Intelligence</a></li>
       <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="blog/blog-index.html">Blog</a></li>
+      <li><a href="help-guide.html">Help Guide</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div style="display:flex;gap:12px">
       <a href="https://app.notetomail.com/signin" class="btn-ghost">Sign in</a>
       <a href="https://app.notetomail.com/signup" class="btn-primary">Start free →</a>
     </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#how-it-works" onclick="toggleMenu()">How it works</a>
+  <a href="/meeting-intelligence" onclick="toggleMenu()">Meeting Intelligence</a>
+  <a href="/journey-intelligence" onclick="toggleMenu()">Journey Intelligence</a>
+  <a href="index.html#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="blog/blog-index.html" onclick="toggleMenu()">Blog</a>
+  <a href="help-guide.html" onclick="toggleMenu()">Help Guide</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="https://app.notetomail.com/signin" onclick="toggleMenu()">Sign in</a>
+  <a href="https://app.notetomail.com/signup" class="btn-primary" style="text-align:center;margin-top:8px;" onclick="toggleMenu()">Start free →</a>
+</div>
 
 <div class="page-header">
   <div class="container">
@@ -125,19 +215,19 @@
   <div class="support-grid">
     <a href="help-guide.html" class="support-card">
       <span class="support-card-icon">📖</span>
-      <h3>Full Help Guide</h3>
+      <h2>Full Help Guide</h2>
       <p>Step-by-step walkthroughs for every feature — recording, AI analysis, Ask My Notes, translations and more.</p>
       <span class="card-link">Open guide →</span>
     </a>
     <a href="contact.html" class="support-card">
       <span class="support-card-icon">💬</span>
-      <h3>Contact Support</h3>
+      <h2>Contact Support</h2>
       <p>Can't find what you need? Our team responds within 24 hours on business days.</p>
       <span class="card-link">Get in touch →</span>
     </a>
     <a href="https://app.notetomail.com/legal/terms" class="support-card">
       <span class="support-card-icon">📄</span>
-      <h3>Terms & Privacy</h3>
+      <h2>Terms & Privacy</h2>
       <p>Read our Terms of Service and Privacy Policy. UK GDPR compliant.</p>
       <span class="card-link">Read policies →</span>
     </a>
@@ -150,57 +240,85 @@
       <div class="guide-item">
         <span class="guide-icon">🎙</span>
         <div>
-          <h4>Recording a meeting</h4>
+          <h3>Recording a meeting</h3>
           <p>Click Start in the Voice Notes panel. Speak naturally — NoteToMail transcribes in real time. Click Stop, then Process Recording when done. Long recordings (up to 60 minutes) are supported.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">📝</span>
         <div>
-          <h4>Pasting notes manually</h4>
+          <h3>Pasting notes manually</h3>
           <p>Paste your meeting notes into the notes box. Notes can be in any language. Enable AI Mode for automatic analysis, or use Manual Mode for a straightforward email draft.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">🧠</span>
         <div>
-          <h4>Using AI Mode</h4>
+          <h3>Using AI Mode</h3>
           <p>Toggle AI Mode on. Your notes are automatically analysed for takeaways, decisions, action items and risks. The analysis updates as you type. Click Generate Email to create a structured email from the analysis.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">📧</span>
         <div>
-          <h4>Sending your email</h4>
+          <h3>Sending your email</h3>
           <p>After generating, you can edit the subject and body directly. Use the Gmail, Outlook or Yahoo buttons to open it in your email client, or click Copy to paste it anywhere.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">🔍</span>
         <div>
-          <h4>Ask My Notes</h4>
+          <h3>Ask My Notes</h3>
           <p>Type a question about your meeting notes — "What were the risks?", "Who owns the budget task?" — and AI will answer based on your notes. Works best with detailed notes.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">🌍</span>
         <div>
-          <h4>Using other languages</h4>
-          <p>Set the Spoken Language to your language before recording. You can also translate notes to another language using the Translate Notes button. Email output is currently generated in English.</p>
+          <h3>Using other languages</h3>
+          <p>Set the Spoken Language before recording. Choose your Analysis Output Language and Email Output Language independently — so your analysis and email can each be in a different language.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">📊</span>
         <div>
-          <h4>Checking your usage</h4>
-          <p>Go to Dashboard → View detailed usage to see your transcription minutes and AI calls used this period. You'll receive a warning when you reach 80% of your allowance.</p>
+          <h3>Checking your usage</h3>
+          <p>Go to Dashboard → View detailed usage to see your AI minutes and AI calls used this period. You'll receive a warning when you reach 80% of your allowance.</p>
         </div>
       </div>
       <div class="guide-item">
         <span class="guide-icon">💳</span>
         <div>
-          <h4>Managing your subscription</h4>
+          <h3>Managing your subscription</h3>
           <p>Upgrade, cancel or change your plan from the Dashboard. Cancellations take effect at the end of your billing period and your account moves to the Free plan automatically.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">💾</span>
+        <div>
+          <h3>Saving a meeting <span class="pro-badge">Pro</span></h3>
+          <p>Available on Pro plans. After processing your notes or recording, your meeting is automatically saved to your account. Go to Meetings in the app to view all saved sessions — including transcript, AI analysis and generated email.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">⚖️</span>
+        <div>
+          <h3>Comparing meetings <span class="pro-badge">Pro</span></h3>
+          <p>Available on Pro plans. Go to Meetings and select two or more saved sessions. Click Compare to view them side by side. NoteToMail highlights common themes, decisions and action items across the selected meetings.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">🔎</span>
+        <div>
+          <h3>Searching your meetings <span class="pro-badge">Pro</span></h3>
+          <p>Available on Pro plans. Use the search bar in the Meetings section to find any past meeting. Semantic search understands meaning — searching "budget discussion" will find meetings where finances were discussed even if those exact words weren't used.</p>
+        </div>
+      </div>
+      <div class="guide-item">
+        <span class="guide-icon">🔒</span>
+        <div>
+          <h3>How your data is stored</h3>
+          <p>Your meetings, notes and recordings are encrypted and stored securely in compliance with UK GDPR regulations. Data is automatically archived and deleted after 12 months. We never use your content to train AI models. Coming soon: store your meetings in your own shared storage area.</p>
         </div>
       </div>
     </div>
@@ -213,7 +331,7 @@
       <p>Our support team is here to help. We respond to all enquiries within 24 hours on business days (Monday–Friday, UK time).</p>
       <div class="contact-detail">
         <span>📧</span>
-        <a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecae4e5feeffee5e7ebe3e6a4e9e5e7"><span class="__cf_email__" data-cfemail="11626461617e6365517f7e6574657e7c70787d3f727e7c">[email&#160;protected]</span></a>
+        <a href="mailto:support@notetomail.com">support@notetomail.com</a>
       </div>
       <div class="contact-detail">
         <span>⏰</span>
@@ -225,7 +343,7 @@
       </div>
     </div>
     <div>
-      <form class="contact-form" onsubmit="submitForm(event)">
+      <form class="contact-form" action="https://formspree.io/f/support@notetomail.com" method="POST" onsubmit="submitForm(event)">
         <div class="form-group">
           <label for="name">Your name</label>
           <input type="text" id="name" placeholder="Jane Smith" required />
@@ -263,9 +381,13 @@
 
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 NoteToMail · SafalSolutions Ltd</span>
+    <span>© 2026 NoteToMail · SafalSolutions Ltd · Registered in England and Wales</span>
     <div class="footer-links">
       <a href="index.html">Home</a>
+      <a href="/meeting-intelligence">Meeting Intelligence</a>
+      <a href="/journey-intelligence">Journey Intelligence</a>
+      <a href="blog/blog-index.html">Blog</a>
+      <a href="help-guide.html">Help Guide</a>
       <a href="contact.html">Contact</a>
       <a href="https://app.notetomail.com/legal/terms">Terms</a>
       <a href="https://app.notetomail.com/legal/privacy">Privacy</a>
@@ -273,10 +395,40 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
   function submitForm(e) {
     e.preventDefault();
-    // In production, replace with your form submission endpoint or Formspree/EmailJS
     const btn = e.target.querySelector('.form-submit');
     btn.textContent = 'Sending…';
-    btn.d
+    btn.disabled = true;
+
+    const data = new FormData(e.target);
+
+    fetch(e.target.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        e.target.reset();
+        btn.textContent = 'Send message →';
+        btn.disabled = false;
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Send message →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at support@notetomail.com');
+      }
+    }).catch(() => {
+      btn.textContent = 'Send message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email us directly at support@notetomail.com');
+    });
+  }
+</script>
+</body>
+</html>

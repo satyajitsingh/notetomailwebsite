@@ -1,0 +1,8 @@
+# https://notetomail.com — marketing site
+User-agent: *
+Allow: /
+
+# The NoteToMail application lives on a separate host (app.notetomail.com)
+# and is not part of this site.
+
+Sitemap: https://notetomail.com/sitemap.xml
