@@ -95,7 +95,7 @@
     </ul>
     <div style="display:flex;gap:12px">
       <a href="https://app.notetomail.com/signin" class="btn-ghost">Sign in</a>
-      <a href="https://app.notetomail.com/signup" class="btn-primary">Start free →</a>
+      <a href="https://app.notetomail.com/signup" class="btn-primary">Start free &rarr;</a>
     </div>
   </div>
 </nav>
@@ -110,7 +110,6 @@
 <div class="container">
   <div class="contact-layout">
 
-    <!-- Info sidebar -->
     <div class="contact-info">
       <h2>We'd love to hear from you</h2>
       <p>Whether you have a question about features, pricing, billing, or anything else — our team is ready to help.</p>
@@ -120,7 +119,7 @@
       <div style="margin-top: 24px;">
         <div class="info-card">
           <div class="info-card-header">
-            <span>📧</span>
+            <span>&#128231;</span>
             <h4>Email support</h4>
           </div>
           <p><a href="mailto:support@notetomail.com">support@notetomail.com</a></p>
@@ -128,15 +127,15 @@
 
         <div class="info-card">
           <div class="info-card-header">
-            <span>⏰</span>
+            <span>&#9200;</span>
             <h4>Support hours</h4>
           </div>
-          <p>Monday to Friday<br>9:00am – 5:00pm GMT</p>
+          <p>Monday to Friday<br>9:00am &ndash; 5:00pm GMT</p>
         </div>
 
         <div class="info-card">
           <div class="info-card-header">
-            <span>🏢</span>
+            <span>&#127962;</span>
             <h4>Company</h4>
           </div>
           <p>SafalSolutions Ltd<br>Registered in England and Wales<br><a href="https://www.safalsolutions.co.uk" target="_blank">safalsolutions.co.uk</a></p>
@@ -144,7 +143,7 @@
 
         <div class="info-card">
           <div class="info-card-header">
-            <span>📚</span>
+            <span>&#128218;</span>
             <h4>Self-service help</h4>
           </div>
           <p>Browse <a href="support.html">guides and FAQs</a> for instant answers to common questions.</p>
@@ -152,51 +151,50 @@
       </div>
     </div>
 
-    <!-- Contact form -->
     <div class="contact-form-card">
       <h3>Send us a message</h3>
       <form class="contact-form" onsubmit="submitForm(event)" id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label for="firstName">First name *</label>
-            <input type="text" id="firstName" placeholder="Jane" required />
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
           </div>
           <div class="form-group">
             <label for="lastName">Last name</label>
-            <input type="text" id="lastName" placeholder="Smith" />
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" />
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email address *</label>
-          <input type="email" id="email" placeholder="jane@example.com" required />
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
         </div>
         <div class="form-group">
           <label for="accountEmail">Account email (if different)</label>
-          <input type="email" id="accountEmail" placeholder="The email you signed up with" />
+          <input type="email" id="accountEmail" name="accountEmail" placeholder="The email you signed up with" />
         </div>
         <div class="form-group">
           <label for="topic">Topic *</label>
-          <select id="topic" required>
+          <select id="topic" name="topic" required>
             <option value="">Select a topic</option>
             <option>Getting started / how to use</option>
-            <option>Billing & subscription</option>
+            <option>Billing &amp; subscription</option>
             <option>Refund request</option>
             <option>Technical issue / bug</option>
             <option>Account deletion</option>
-            <option>Privacy & data request</option>
+            <option>Privacy &amp; data request</option>
             <option>Feature suggestion</option>
             <option>Other</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea id="message" placeholder="Please describe your question or issue in as much detail as possible…" required></textarea>
+          <textarea id="message" name="message" placeholder="Please describe your question or issue in as much detail as possible..." required></textarea>
         </div>
         <p class="form-note">By submitting this form you agree to our <a href="https://app.notetomail.com/legal/privacy" style="color:var(--accent)">Privacy Policy</a>. We'll only use your details to respond to your enquiry.</p>
-        <button type="submit" class="form-submit">Send message →</button>
+        <button type="submit" class="form-submit">Send message &rarr;</button>
         <div class="form-success" id="formSuccess">
-          ✓ <strong>Message received.</strong> Thank you for getting in touch.<br>
-          We'll respond to <span id="replyEmail"></span> within 24 hours (Monday–Friday).
+          &#10003; <strong>Message received.</strong> Thank you for getting in touch.<br>
+          We'll respond to <span id="replyEmail"></span> within 24 hours (Monday&ndash;Friday).
         </div>
       </form>
     </div>
@@ -206,7 +204,7 @@
 
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 NoteToMail · SafalSolutions Ltd</span>
+    <span>&copy; 2026 NoteToMail &middot; SafalSolutions Ltd</span>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="support.html">Support</a>
@@ -217,20 +215,32 @@
 </footer>
 
 <script>
-  function submitForm(e) {
+  async function submitForm(e) {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    // Replace this with your actual form handler (Formspree, EmailJS, etc.)
-    // Example Formspree: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(e.target) })
-    setTimeout(() => {
-      document.getElementById('replyEmail').textContent = email;
-      document.getElementById('formSuccess').style.display = 'block';
-      document.getElementById('contactForm').style.display = 'none';
-    }, 1000);
+    try {
+      const res = await fetch('https://formspree.io/f/mbdprdly', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        document.getElementById('replyEmail').textContent = email;
+        document.getElementById('formSuccess').style.display = 'block';
+        document.getElementById('contactForm').style.display = 'none';
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please email support@notetomail.com directly.');
+      btn.textContent = 'Send message';
+      btn.disabled = false;
+    }
   }
 </script>
 </body>
