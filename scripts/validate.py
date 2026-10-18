@@ -249,6 +249,11 @@ def main():
         ("2 Journeys", journey, "journey page: Free Journey allowance"),
         ("Advanced AI <strong>Learn</strong>", journey, "journey page: Pro AI capabilities"),
         ("save", journey, "journey page: storage opt-in"),
+        # Storage needs BOTH the account toggle (User.storeMeetings, default
+        # false, enforced in src/server/meetings/storage.ts) and a per-meeting
+        # save. Saying only "click Save" understates the opt-in.
+        ("off by default", journey, "journey page: storage off by default"),
+        ("off by default", home, "homepage: storage off by default"),
         # Effectiveness/coaching evidence is written by Learn, which is Pro.
         # The page must say so, or Free readers are misled.
         ("produced\n        by <strong>Advanced AI Learn, which is a Pro capability</strong>", journey,
@@ -270,6 +275,10 @@ def main():
         (r"automatically archived after 12 months", "unsupported auto-archive claim"),
         # Launch pages must not ship mock product imagery.
         (r"shot-frame|Product screenshot to follow", "placeholder product screenshot"),
+        # Saved meetings persist until the user deletes them, so a blanket
+        # "never stored" claim contradicts the product and the policy's own
+        # saved-meetings section.
+        (r"never stored after processing|notes are never stored", "blanket never-stored claim"),
     ):
         for f in files:
             if re.search(pat, io.open(f, encoding="utf-8").read(), re.I):
