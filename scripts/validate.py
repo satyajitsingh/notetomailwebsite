@@ -238,6 +238,8 @@ def main():
     # Free functionality must not be labelled Pro-only.
     if re.search(r"Meeting History\s*<span class=\"pro-badge\">", home):
         ent.append("homepage labels Meeting History as Pro-only (Free allows 6 saved meetings)")
+    # Verified against ntmapp src/config/journeys/journeyLimits.ts and the
+    # Pro gates in app/api/** (see docs/journey-screenshots.md for context).
     for frag, where, label in (
         ("Up to 6 saved meetings", home, "Free: 6 saved meetings"),
         ("Up to 2 Journeys", home, "Free: 2 Journeys"),
@@ -246,14 +248,29 @@ def main():
         ("Advanced AI Learn, Compare &amp; Ask", home, "Pro-only AI named in pricing"),
         ("2 Journeys", journey, "journey page: Free Journey allowance"),
         ("Advanced AI <strong>Learn</strong>", journey, "journey page: Pro AI capabilities"),
-        ("opt-in", journey, "journey page: storage opt-in"),
+        ("save", journey, "journey page: storage opt-in"),
+        # Effectiveness/coaching evidence is written by Learn, which is Pro.
+        # The page must say so, or Free readers are misled.
+        ("produced\n        by <strong>Advanced AI Learn, which is a Pro capability</strong>", journey,
+         "journey page: effectiveness evidence needs Pro"),
+        # Free caps are enforced at create time only.
+        ("applied when you create something new", journey, "journey page: create-time limits"),
     ):
         if frag not in where:
             ent.append("missing entitlement copy: %s" % label)
-    # Claims we must never make.
-    for pat, why in ((r"unlimited Journeys", "claims unlimited Journeys"),
-                     (r"unlimited meetings", "claims unlimited meetings"),
-                     (r"predicts? (?:deal|hiring|relationship)", "predictive claim")):
+
+    # Claims the product does not support.
+    for pat, why in (
+        (r"unlimited Journeys", "claims unlimited Journeys"),
+        (r"unlimited meetings", "claims unlimited meetings"),
+        (r"predicts? (?:deal|hiring|relationship)", "predictive claim"),
+        # No cron, no purge route and no expiry column exist; the published
+        # privacy policy says deletion is user-initiated.
+        (r"archived and deleted after 12 months", "unsupported auto-deletion claim"),
+        (r"automatically archived after 12 months", "unsupported auto-archive claim"),
+        # Launch pages must not ship mock product imagery.
+        (r"shot-frame|Product screenshot to follow", "placeholder product screenshot"),
+    ):
         for f in files:
             if re.search(pat, io.open(f, encoding="utf-8").read(), re.I):
                 ent.append("%s in %s" % (why, f))
