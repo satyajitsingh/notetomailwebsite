@@ -266,8 +266,20 @@ def main():
 
     # Claims the product does not support.
     for pat, why in (
-        (r"unlimited Journeys", "claims unlimited Journeys"),
-        (r"unlimited meetings", "claims unlimited meetings"),
+        # NOTE: there is deliberately no "unlimited" rule here.
+        #
+        # "Unlimited" is TRUE for paid plans — PAID_MAX_JOURNEYS and
+        # PAID_MAX_MEETINGS_PER_JOURNEY are null, and the app's own Pro card
+        # says so. The only risk is attaching it to Free, and every text
+        # heuristic for that fired on correct copy instead: "Everything in
+        # Free / Unlimited saved meetings" inside the Pro card, and
+        # "six on Free, unlimited on Pro" which is the contrast we want.
+        #
+        # The Free caps are guarded positively instead, by the required-copy
+        # checks above ("Up to 2 Journeys", "Up to 6 meetings per Journey",
+        # "Up to 6 saved meetings"). Replacing any of those with an unlimited
+        # claim removes the required string and fails the build, which is the
+        # same protection without the false positives.
         (r"predicts? (?:deal|hiring|relationship)", "predictive claim"),
         # No cron, no purge route and no expiry column exist; the published
         # privacy policy says deletion is user-initiated.
@@ -279,6 +291,16 @@ def main():
         # "never stored" claim contradicts the product and the policy's own
         # saved-meetings section.
         (r"never stored after processing|notes are never stored", "blanket never-stored claim"),
+        # 13.99 x 12 = 167.88 against 139 is 17%, not 20%. The app derives this
+        # (ANNUAL_SAVING_PERCENT) after shipping the same defect on its own card.
+        (r"Save 20%", "wrong annual saving (17%, not 20%)"),
+        # There is ONE Pro allowance (3000 min / 5000 calls). Annual does not
+        # buy a bigger one; the site previously advertised 5,000/8,000.
+        (r"8,000 AI calls", "non-existent annual allowance"),
+        # Recording online calls is on every plan; Pro HD is transcription
+        # quality, not access (RECORDING_ONLINE_IS_FREE in the app's help copy).
+        (r"Teams, Zoom and Google Meet calls on Pro|online call[^.]{0,40}Pro plans",
+         "online-call capture wrongly sold as Pro-only"),
     ):
         for f in files:
             if re.search(pat, io.open(f, encoding="utf-8").read(), re.I):

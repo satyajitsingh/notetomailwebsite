@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NoteToMail — Help Guide</title>
-  <meta name="description" content="Step-by-step help for NoteToMail: recording meetings, uploading files, AI analysis, Ask My Notes, translation, generating emails and usage limits." />
+  <meta name="description" content="Step-by-step help for NoteToMail: recording and uploading meetings, AI analysis, Ask My Notes, building Journeys, outcome tracking, plan limits and usage." />
   <link rel="canonical" href="https://notetomail.com/help-guide.html" />
   <meta property="og:title" content="NoteToMail &mdash; Help Guide" />
-  <meta property="og:description" content="Step-by-step help for NoteToMail: recording meetings, uploading files, AI analysis, Ask My Notes, translation, generating emails and usage limits." />
+  <meta property="og:description" content="Step-by-step help for NoteToMail: recording and uploading meetings, AI analysis, Ask My Notes, building Journeys, outcome tracking, plan limits and usage." />
   <meta property="og:url" content="https://notetomail.com/help-guide.html" />
   <meta property="og:site_name" content="NoteToMail" />
   <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NoteToMail &mdash; Help Guide" />
-  <meta name="twitter:description" content="Step-by-step help for NoteToMail: recording meetings, uploading files, AI analysis, Ask My Notes, translation, generating emails and usage limits." />
+  <meta name="twitter:description" content="Step-by-step help for NoteToMail: recording and uploading meetings, AI analysis, Ask My Notes, building Journeys, outcome tracking, plan limits and usage." />
   <meta name="twitter:image" content="https://notetomail.com/og-image.png" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!---linkedln-->
@@ -232,7 +232,10 @@
   .nav-item .nav-icon { font-size: 15px; width: 20px; text-align: center; }
 
   /* MAIN CONTENT */
-  .content { display: flex; flex-direction: column; gap: 40px; }
+  /* min-width:0 lets this grid item shrink below the intrinsic width of its
+     widest child. Without it the track stretched and the page scrolled
+     sideways on a 320px screen. */
+  .content { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
 
   /* SECTION */
   .section {
@@ -657,6 +660,12 @@
     .mode-cards, .analysis-grid, .practices, .plans, .options-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 36px; }
   }
+
+  @media (max-width: 600px) {
+    /* 40px of side padding leaves too little room on a small phone. */
+    .layout { padding: 40px 16px; }
+    .section-body, .section-header { padding-left: 16px; padding-right: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -679,6 +688,7 @@
     <div class="hero-card"><span class="icon">📝</span> Paste Notes</div>
     <div class="hero-card"><span class="icon">📄</span> Upload Files</div>
     <div class="hero-card"><span class="icon">✉️</span> Generate Emails</div>
+    <div class="hero-card"><span class="icon">🗺️</span> Journeys</div>
   </div>
 </div>
 
@@ -693,6 +703,7 @@
     <a class="nav-item" href="#uploading"><span class="nav-icon">📂</span> Uploading Files</a>
     <a class="nav-item" href="#ai-analysis"><span class="nav-icon">🧠</span> AI Analysis</a>
     <a class="nav-item" href="#ask-notes"><span class="nav-icon">🔍</span> Ask My Notes</a>
+    <a class="nav-item" href="#journeys"><span class="nav-icon">🗺️</span> Journeys</a>
     <a class="nav-item" href="#translate"><span class="nav-icon">🌍</span> Translate Notes</a>
     <a class="nav-item" href="#generate"><span class="nav-icon">✉️</span> Generate Emails</a>
     <a class="nav-item" href="#output"><span class="nav-icon">📊</span> Understanding Output</a>
@@ -880,6 +891,62 @@
       </div>
     </section>
 
+    <!-- JOURNEYS -->
+    <section class="section" id="journeys">
+      <div class="section-header">
+        <div class="section-icon">🗺️</div>
+        <div>
+          <h2>Journeys</h2>
+          <p>Your meetings as one story, not six separate ones</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p style="color:var(--text-mid); margin-bottom:20px;">A Journey groups related saved meetings &mdash; a client relationship, a project, an interview process &mdash; so you can see how the conversation developed instead of reading each meeting on its own.</p>
+
+        <div class="warn"><span>⚠️</span><span><strong>Journeys are built from saved meetings.</strong> Meeting storage is off by default, so turn it on in your dashboard first, then save the meetings you want to include.</span></div>
+
+        <h3 style="font-size:15px; margin:20px 0 12px; color:var(--text-dark);">Creating a Journey</h3>
+        <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Turn on meeting storage</h3><p>In your dashboard, switch meeting storage on. Nothing already recorded is uploaded retroactively.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Save the meetings</h3><p>Click Save on each meeting you want in the Journey. The transcript, analysis and generated email are kept together.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Create the Journey and add them</h3><p>Go to Meetings &rarr; Journeys, create a Journey, and add the related meetings in the order they happened.</p></div></div>
+
+        <div class="divider"></div>
+
+        <h3 style="font-size:15px; margin-bottom:12px; color:var(--text-dark);">What a Journey shows you</h3>
+        <div class="analysis-grid">
+          <div class="analysis-card">
+            <div class="analysis-card-header">✅ On every plan, Free included</div>
+            <div class="analysis-card-body">
+              <div class="analysis-item"><div class="analysis-dot"></div>Timeline of the meetings in order</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Overview of themes across the Journey</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Outcome tracking &mdash; achieved, not achieved, pending or unknown</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Reading effectiveness and coaching panels, where assessment evidence already exists</div>
+            </div>
+          </div>
+          <div class="analysis-card">
+            <div class="analysis-card-header">⭐ Pro only</div>
+            <div class="analysis-card-body">
+              <div class="analysis-item"><div class="analysis-dot"></div>Learn &mdash; assesses the meetings and builds the evidence the coaching panels read</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Ask a Journey &mdash; question every meeting at once</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Compare across the Journey</div>
+              <div class="analysis-item"><div class="analysis-dot"></div>Deeper Journey Intelligence analysis</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip"><span class="tip-icon">💡</span><span><strong>Reading is free; generating is Pro.</strong> The effectiveness and coaching panels are not paywalled &mdash; but the assessment evidence they read is produced by Learn, which is Pro. A Free account that has never run Learn will see those two panels empty.</span></div>
+
+        <div class="divider"></div>
+
+        <h3 style="font-size:15px; margin-bottom:12px; color:var(--text-dark);">Journey limits</h3>
+        <div class="options">
+          <div class="option"><span class="opt-icon">🆓</span><div><strong>Free</strong>Up to 2 Journeys, with up to 6 meetings in each, and up to 6 saved meetings in total.</div></div>
+          <div class="option"><span class="opt-icon">⭐</span><div><strong>Pro</strong>Unlimited Journeys, unlimited meetings per Journey, unlimited saved meetings.</div></div>
+        </div>
+        <div class="tip"><span class="tip-icon">💡</span><span>Limits apply when you create something new. If you reach one, the Journeys you already have stay readable and you can still record outcomes on them &mdash; you just cannot create more until you upgrade.</span></div>
+      </div>
+    </section>
+
     <!-- TRANSLATE -->
     <section class="section" id="translate">
       <div class="section-header">
@@ -1008,27 +1075,36 @@
       <div class="section-body">
         <div class="plans">
           <div class="plan free">
-            <h3>🆓 Free Plan</h3>
+            <h3>🆓 Free Plan — £0</h3>
             <ul>
-              <li>30 transcription minutes / month</li>
-              <li>100 AI emails / month</li>
-              <li>Voice recording</li>
-              <li>AI analysis</li>
+              <li>30 AI minutes / month</li>
+              <li>100 AI calls / month</li>
+              <li>Voice recording, file upload and online calls</li>
+              <li>Recordings up to 120 minutes</li>
+              <li>AI analysis and email generation</li>
+              <li>Ask My Notes (single meeting)</li>
+              <li>Up to 6 saved meetings</li>
+              <li>Up to 2 Journeys, 6 meetings per Journey</li>
+              <li>Journey timelines, overviews and outcome tracking</li>
               <li>40+ languages</li>
             </ul>
           </div>
           <div class="plan pro">
-            <h4>⭐ Pro Plan</h4>
+            <h3>⭐ Pro Plan — £13.99/month or £139/year</h3>
             <ul>
-              <li>3,000+ transcription minutes / month</li>
-              <li>5,000+ AI emails / month</li>
-              <li>Ask My Notes AI feature</li>
-              <li>Priority processing</li>
+              <li>Everything in Free</li>
+              <li>3,000 AI minutes / month</li>
+              <li>5,000 AI calls / month</li>
+              <li>Unlimited saved meetings and Journeys</li>
+              <li>Unlimited meetings per Journey</li>
+              <li>Learn and evidence-based coaching</li>
+              <li>Ask a Journey, Compare and Meeting Search</li>
+              <li>Pro HD transcription for online calls</li>
               <li>Cancel anytime</li>
             </ul>
           </div>
         </div>
-        <div class="tip" style="margin-top:20px;"><span class="tip-icon">💡</span><span>Check your remaining quota at any time in your <strong>Dashboard</strong>. You'll be notified when you're close to your limit.</span></div>
+        <div class="tip" style="margin-top:20px;"><span class="tip-icon">💡</span><span>Check your remaining quota at any time in your <strong>Dashboard</strong>. You'll be notified when you're close to your limit. Annual billing is £139 for the year — about 17% less than paying monthly.</span></div>
       </div>
     </section>
 
