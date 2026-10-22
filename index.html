@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="jN5_sM2YT8TlNI9cLQJbFQOp0LBzG-FJ69l03ibrVQM">
   <title>NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence</title>
-  <meta name="description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta name="description" content="AI meeting intelligence: capture and analyse meetings, bring related ones into a Journey, track confirmed outcomes and turn insights into professional follow-ups.">
   <meta name="keywords" content="AI meeting intelligence, meeting intelligence platform, AI meeting analysis, meeting journey, journey intelligence, meeting comparison, semantic meeting search, ask questions about meetings, conversation intelligence, AI meeting notes, follow-up email generator">
   <link rel="canonical" href="https://notetomail.com/">
 
@@ -30,7 +30,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence">
-  <meta property="og:description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta property="og:description" content="AI meeting intelligence: capture and analyse meetings, bring related ones into a Journey, track confirmed outcomes and turn insights into professional follow-ups.">
   <meta property="og:url" content="https://notetomail.com/">
   <meta property="og:site_name" content="NoteToMail">
   <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NoteToMail | AI Meeting Intelligence &amp; Journey Intelligence">
-  <meta name="twitter:description" content="AI meeting intelligence: capture and analyse meetings, search your history, ask questions, compare related meetings and turn insights into professional follow-ups.">
+  <meta name="twitter:description" content="AI meeting intelligence: capture and analyse meetings, bring related ones into a Journey, track confirmed outcomes and turn insights into professional follow-ups.">
   <meta name="twitter:image" content="https://notetomail.com/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,6 +93,8 @@
           "Keyword and semantic meeting search",
           "Ask My Notes natural-language questions",
           "Meeting comparison across related meetings",
+          "Journeys grouping related meetings with timelines and overviews",
+          "Confirmed outcome tracking across a Journey",
           "Professional follow-up email generation",
           "Input in 40+ languages"
         ],
@@ -186,6 +188,11 @@
       font-size: 13px; color: var(--ink); line-height: 1.6;
     }
     .app-email-box strong { color: var(--accent); display: block; margin-bottom: 4px; }
+    .app-figure { margin: 0; }
+    .app-caption {
+      margin-top: 10px; text-align: center;
+      font-size: 12px; color: var(--ink-muted); line-height: 1.5;
+    }
     .floating-tag {
       position: absolute; background: var(--white);
       border-radius: 10px; padding: 10px 14px;
@@ -445,11 +452,12 @@
           conversations develop over time.
         </p>
         <p class="hero-sub-alt fade-up fade-up-d2">
-          <strong>And when the meeting is over</strong>, turn those insights into a professional follow-up in seconds.
+          <strong>Then follow through.</strong> Turn what was agreed into a professional follow-up in seconds, track
+          which outcomes were actually confirmed, and see how you're progressing across a Journey of related meetings.
         </p>
         <div class="hero-actions fade-up fade-up-d3">
           <a href="https://app.notetomail.com/signup" class="btn-primary btn-primary-lg">Start for free &rarr;</a>
-          <a href="#how-it-works" class="btn-outline btn-primary-lg">See how it works</a>
+          <a href="/journey-intelligence" class="btn-outline btn-primary-lg">See how Journeys work</a>
         </div>
         <p class="hero-note fade-up fade-up-d3">
           <strong>Free plan included.</strong> No credit card required.
@@ -457,6 +465,7 @@
       </div>
 
       <div class="hero-visual fade-up fade-up-d2">
+        <figure class="app-figure" role="group" aria-label="Illustrative example of NoteToMail output">
         <div class="app-card">
           <div class="app-card-header">
             <div class="dot dot-r"></div>
@@ -487,6 +496,8 @@
             </div>
           </div>
         </div>
+        <figcaption class="app-caption">Illustrative example &mdash; not a screenshot, and not real meeting content.</figcaption>
+        </figure>
         <div class="floating-tag tag-1">&#128506; Journey view <span style="color:var(--accent)">&#10003;</span></div>
         <div class="floating-tag tag-2">&#128269; Semantic search</div>
       </div>
@@ -528,7 +539,8 @@
         <div class="story-icon" aria-hidden="true">&#127897;</div>
         <h3>Capture</h3>
         <p>Record a meeting, event or lecture in the browser, upload an existing audio, video or text file, or simply
-        paste the notes you already took. On Pro, bring in Teams, Zoom and Google Meet calls. Works in 40+ languages.</p>
+        paste the notes you already took. Record Teams, Zoom and Google Meet calls on any plan, Free included.
+        Up to 120 minutes per recording, in 40+ languages.</p>
       </div>
       <div class="story-card fade-up fade-up-d1">
         <div class="story-num">02</div>
@@ -579,10 +591,10 @@
   <div class="container">
     <div class="fade-up" style="max-width:760px;">
       <span class="section-label">Journey Intelligence</span>
-      <h2 class="section-title">Don't just remember the meeting. Understand the journey.</h2>
+      <h2 class="section-title">One meeting tells you what happened. A Journey shows you how you're progressing.</h2>
       <p class="section-sub" style="max-width:none;">
-        A single meeting tells you what happened today. A journey helps you understand how the conversation,
-        decisions and relationship have evolved across multiple meetings.
+        Bring related meetings together into a Journey, then compare them to understand what changed across the
+        conversation &mdash; what was agreed, which outcomes were confirmed, and what is still open.
       </p>
     </div>
 
@@ -605,6 +617,26 @@
       <div class="q-item">How did priorities change?</div>
       <div class="q-item">What decisions progressed?</div>
       <div class="q-item">What should I remember before the next conversation?</div>
+    </div>
+
+    <div class="card-grid card-grid-2 fade-up fade-up-d3" style="margin-top:40px;">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">&#10003;</div>
+        <h3>Included on the Free plan</h3>
+        <p>Up to <strong>2 Journeys</strong>, with up to <strong>6 meetings per Journey</strong> and up to
+        <strong>6 saved meetings</strong> per account.</p>
+        <p>Journey timelines and overviews, plus outcome tracking &mdash; record each meeting as achieved, not
+        achieved, pending or unknown. Effectiveness and coaching views are readable on Free wherever assessment
+        evidence is already stored; producing that evidence needs Pro.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">&#9889;</div>
+        <h3>On Pro</h3>
+        <p>Unlimited Journeys, meetings per Journey and saved meetings. Advanced AI <strong>Learn</strong>,
+        <strong>Compare</strong> and <strong>Ask</strong>, meeting search, and deeper Journey Intelligence analysis.</p>
+        <p>Cross-meeting AI &mdash; Learn, Compare, Ask and meeting search &mdash; is Pro. Journeys and meetings
+        per Journey are not capped on paid plans. The app prompts you at the point a Pro capability is needed.</p>
+      </div>
     </div>
 
     <p class="fade-up fade-up-d3" style="margin-top:36px;">
@@ -650,8 +682,8 @@
       </div>
       <div class="feat-card fade-up fade-up-d1">
         <span class="feat-icon" aria-hidden="true">&#128190;</span>
-        <h3>Meeting History <span class="pro-badge">Pro</span></h3>
-        <p>Every meeting is automatically saved &mdash; transcript, AI analysis and generated email all in one place. Revisit any past meeting whenever you need it.</p>
+        <h3>Meeting History</h3>
+        <p>Choose to save a meeting and its transcript, AI analysis and generated email stay together in one place. The Free plan keeps up to 6 saved meetings; Pro raises the allowance.</p>
       </div>
       <div class="feat-card fade-up fade-up-d2">
         <span class="feat-icon" aria-hidden="true">&#128270;</span>
@@ -666,7 +698,7 @@
       <div class="feat-card fade-up fade-up-d1">
         <span class="feat-icon" aria-hidden="true">&#128506;</span>
         <h3>Journey Intelligence</h3>
-        <p>Bring related meetings together into a Journey, then compare them to understand what changed across the conversation. <a href="/journey-intelligence">More</a>.</p>
+        <p>Bring related meetings together into a Journey, then compare them to understand what changed across the conversation. Free includes 2 Journeys. <a href="/journey-intelligence">More</a>.</p>
       </div>
       <div class="feat-card fade-up fade-up-d2">
         <span class="feat-icon" aria-hidden="true">&#9993;</span>
@@ -676,7 +708,7 @@
       <div class="feat-card fade-up">
         <span class="feat-icon" aria-hidden="true">&#128274;</span>
         <h3>Privacy &amp; Security First</h3>
-        <p>Your meetings are encrypted and stored securely in compliance with UK GDPR. Data is automatically archived after 12 months. We never use your content to train AI models.</p>
+        <p>Meeting storage is off by default. Turn it on and save a meeting, and its content is encrypted and held in compliance with UK GDPR &mdash; you can permanently delete any saved meeting at any time, and your content is not used to train AI models.</p>
       </div>
       <div class="feat-card fade-up fade-up-d1">
         <span class="feat-icon" aria-hidden="true">&#128202;</span>
@@ -698,9 +730,10 @@
 <section class="section" id="demo">
   <div class="container">
     <div class="text-center fade-up">
-      <span class="section-label">Live example</span>
+      <span class="section-label">Illustrative example</span>
       <h2 class="section-title">See the transformation</h2>
-      <p class="section-sub">Raw meeting notes become structured intelligence &mdash; and then a professional email.</p>
+      <p class="section-sub">Raw meeting notes become structured intelligence &mdash; and then a professional email.
+      The notes and email below are invented for illustration, not a customer's meeting.</p>
     </div>
 
     <div class="demo-grid">
@@ -778,13 +811,21 @@
         <div class="price-name">Free</div>
         <div class="price-amount"><sup>&pound;</sup>0</div>
         <div class="price-period">forever</div>
-        <div class="price-desc">Try the basics &mdash; no credit card needed.</div>
+        <div class="price-desc">Real Journey Intelligence, not a teaser &mdash; no credit card needed.</div>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>30 AI minutes / month</li>
           <li>100 AI calls / month</li>
           <li>Voice recording &amp; file upload</li>
+          <li>Record Teams, Zoom &amp; Meet calls</li>
+          <li>Recordings up to 120 minutes</li>
           <li>AI analysis &amp; email generation</li>
+          <li>Up to 6 saved meetings</li>
+          <li>Up to 2 Journeys</li>
+          <li>Up to 6 meetings per Journey</li>
+          <li>Journey timelines &amp; overviews</li>
+          <li>Confirmed outcome tracking</li>
+          <li>Effectiveness &amp; coaching views readable where assessment evidence exists</li>
           <li>40+ languages</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=free" class="price-cta price-cta-outline">Get started free</a>
@@ -801,9 +842,12 @@
           <li>3,000 AI minutes / month</li>
           <li>5,000 AI calls / month</li>
           <li>Everything in Free</li>
-          <li>Save &amp; search all meetings</li>
-          <li>Compare meetings side by side</li>
-          <li>Join Teams, Zoom &amp; Meet calls</li>
+          <li>Unlimited saved meetings &amp; Journeys</li>
+          <li>Unlimited meetings per Journey</li>
+          <li>Advanced AI Learn, Compare &amp; Ask</li>
+          <li>Deeper Journey Intelligence analysis</li>
+          <li>Search across your meetings</li>
+          <li>Pro HD transcription for online calls</li>
           <li>Cancel anytime</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=pro&billing=monthly" class="price-cta price-cta-filled">Start Pro Monthly</a>
@@ -811,19 +855,22 @@
 
       <!-- Pro Annual -->
       <div class="price-card featured fade-up fade-up-d2">
-        <div class="price-badge">Save 20% &mdash; Best value</div>
+        <div class="price-badge">Save 17% &mdash; Best value</div>
         <div class="price-name">Pro Annual</div>
         <div class="price-amount"><sup>&pound;</sup>139</div>
         <div class="price-period">per year <span style="color:var(--accent);font-weight:600">(&pound;11.58/mo)</span></div>
-        <div class="price-desc">More minutes, more AI calls, best value.</div>
+        <div class="price-desc">The same Pro plan, billed yearly &mdash; two months free.</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>5,000 AI minutes / month</li>
-          <li>8,000 AI calls / month</li>
+          <li>3,000 AI minutes / month</li>
+          <li>5,000 AI calls / month</li>
           <li>Everything in Pro Monthly</li>
-          <li>Save &amp; search all meetings</li>
-          <li>Compare meetings side by side</li>
-          <li>Join Teams, Zoom &amp; Meet calls</li>
+          <li>Unlimited saved meetings &amp; Journeys</li>
+          <li>Unlimited meetings per Journey</li>
+          <li>Advanced AI Learn, Compare &amp; Ask</li>
+          <li>Deeper Journey Intelligence analysis</li>
+          <li>Search across your meetings</li>
+          <li>Pro HD transcription for online calls</li>
           <li>Cancel anytime</li>
         </ul>
         <a href="https://app.notetomail.com/signup?plan=pro&billing=annual" class="price-cta price-cta-filled">Start Pro Annual</a>
@@ -832,6 +879,15 @@
 
     <p style="text-align:center;font-size:13px;color:var(--ink-muted);margin-top:16px;font-style:italic;">
       1 AI minute &asymp; 1 minute of recording or ~150 words of notes &middot; 1 AI call = one analysis or email generation
+    </p>
+
+    <p class="text-center" style="margin-top:20px;font-size:14px;color:var(--ink-soft);max-width:680px;margin-left:auto;margin-right:auto;">
+      <strong>Journeys are on the Free plan.</strong> Free includes 2 Journeys with up to 6 meetings each, up to 6
+      saved meetings, Journey timelines and overviews, and confirmed outcome tracking. The cross-meeting AI &mdash;
+      Learn, Compare, Ask and meeting search &mdash; is Pro, and so is the Journey Intelligence analysis built on it;
+      the app prompts you at the point you reach one. Free limits apply when you create something new, so Journeys you
+      already have stay readable. Recording Teams, Zoom and Google Meet calls is on every plan &mdash; Pro HD refers to
+      transcription quality, not access. Journeys read from saved meetings, and meeting storage is off until you turn it on.
     </p>
 
     <p class="text-center fade-up" style="margin-top:32px;font-size:13px;color:var(--ink-muted)">
@@ -891,7 +947,7 @@
           Is my meeting data private?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Your meetings, notes and recordings are encrypted and stored securely in compliance with UK GDPR regulations. Data is automatically archived and deleted after 12 months. We never use your content to train AI models. Pro users can save, search and revisit their meetings at any time. We are also working on a feature to allow you to store your meetings in your own shared storage area &mdash; coming soon.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Meeting storage is off by default. With it off, your notes, recordings and generated emails leave our systems when the session ends and only usage metadata is kept. Turn storage on in your dashboard and click Save on a meeting, and that meeting's content is stored in your account, encrypted and held in compliance with UK GDPR &mdash; you can view or permanently delete it at any time. Content sent to our AI provider is excluded from model training under our data processing agreement. See the <a href="https://app.notetomail.com/legal/privacy" style="color:var(--accent)">Privacy Policy</a> for the full detail.</div></div>
       </div>
       <div class="faq-item fade-up">
         <button class="faq-q" type="button" aria-expanded="false">
